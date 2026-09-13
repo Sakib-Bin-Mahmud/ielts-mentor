@@ -17,12 +17,12 @@ export function Resources() {
             <Reveal key={r.title} delay={Math.min(i * 0.06, 0.24)}>
               <a
                 href="#"
-                className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white/70 p-6 transition-shadow hover:shadow-md"
+                className="group flex h-full flex-col rounded-xl border border-ink/10 bg-white p-6 transition-colors hover:border-clarity-teal/40"
               >
                 <span className="text-xs font-semibold uppercase tracking-wider text-clarity-teal">
                   {r.category}
                 </span>
-                <h3 className="mt-2 font-display text-lg text-ink group-hover:underline">
+                <h3 className="mt-2 font-display text-lg font-medium text-ink group-hover:underline">
                   {r.title}
                 </h3>
                 <p className="mt-2 flex-1 text-sm text-ink-soft/70">

@@ -40,7 +40,7 @@ export function JourneyMap() {
         <div className="mt-20 grid grid-cols-2 gap-4 border-t border-ink/10 pt-14 sm:grid-cols-4">
           {bandLanguage.map((b, i) => (
             <Reveal key={b.score} delay={Math.min(i * 0.06, 0.3)} className="text-center">
-              <p className="font-display text-4xl font-semibold text-ink sm:text-5xl">
+              <p className="font-mono text-4xl font-semibold text-ink sm:text-5xl">
                 {b.score}
               </p>
               <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-clarity-teal">

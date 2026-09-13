@@ -16,7 +16,7 @@ export function StudentStories() {
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {studentStories.map((s) => (
             <Reveal key={s.key}>
-              <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white/70 p-6">
+              <div className="flex h-full flex-col rounded-xl border border-ink/10 bg-white p-6">
                 <p className="text-sm italic text-ink-soft/70">{s.before}</p>
                 <div className="my-4 flex items-center gap-2 text-compass-gold">
                   <span className="h-px flex-1 bg-compass-gold/30" />
@@ -26,8 +26,8 @@ export function StudentStories() {
                   <span className="h-px flex-1 bg-compass-gold/30" />
                 </div>
                 <p className="text-sm italic text-ink-soft/70">{s.turningPoint}</p>
-                <div className="mt-5 rounded-xl bg-ink px-4 py-4 text-paper">
-                  <p className="font-display text-2xl font-semibold">
+                <div className="mt-5 rounded-lg bg-navy px-4 py-4 text-paper">
+                  <p className="font-mono text-2xl font-semibold text-compass-gold">
                     {s.placeholder ? (
                       <Placeholder label="Add real band score">{s.afterScore}</Placeholder>
                     ) : (

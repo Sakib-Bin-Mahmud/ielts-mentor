@@ -8,16 +8,22 @@ html {
 
 body {
   background-color: #f7f5f0;
-  color: #0b132b;
+  color: #111827;
 }
 
 ::selection {
   background: #f2c94c;
-  color: #0b132b;
+  color: #111827;
 }
 
 .bg-noise {
-  background-image: radial-gradient(rgba(11, 19, 43, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(17, 24, 39, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Same fine grain, tuned for use on dark (navy) surfaces. */
+.bg-noise-dark {
+  background-image: radial-gradient(rgba(247, 245, 240, 0.06) 1px, transparent 1px);
   background-size: 18px 18px;
 }
 

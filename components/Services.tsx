@@ -15,8 +15,8 @@ export function Services() {
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.key} delay={Math.min(i * 0.06, 0.3)}>
-              <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-paper-dim p-6 transition-shadow hover:shadow-md">
-                <h3 className="font-display text-xl text-ink">{s.title}</h3>
+              <div className="flex h-full flex-col rounded-xl border border-ink/10 bg-paper-dim p-6 transition-colors hover:border-clarity-teal/40">
+                <h3 className="font-display text-xl font-medium text-ink">{s.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft/75">
                   {s.text}
                 </p>

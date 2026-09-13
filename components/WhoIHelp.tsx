@@ -11,8 +11,9 @@ export function WhoIHelp() {
   const current = personas.find((p) => p.key === active)!;
 
   return (
-    <section className="bg-ink py-20 text-paper sm:py-28">
-      <div className="mx-auto max-w-content px-5 sm:px-8">
+    <section className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-noise-dark opacity-[0.5]" />
+      <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading
           eyebrow="Who I Help"
           title="You might recognize yourself here."
@@ -23,10 +24,10 @@ export function WhoIHelp() {
             <Reveal key={p.key} delay={Math.min(i * 0.05, 0.2)}>
               <button
                 onClick={() => setActive(p.key)}
-                className={`flex h-full w-full flex-col items-center gap-2 rounded-2xl border p-5 text-center transition-colors ${
+                className={`flex h-full w-full flex-col items-center gap-2 rounded-xl border p-5 text-center transition-colors ${
                   active === p.key
-                    ? "border-compass-gold bg-compass-gold/15"
-                    : "border-paper/15 bg-paper/[0.04] hover:border-paper/30"
+                    ? "border-clarity-teal bg-clarity-teal/10"
+                    : "border-paper/15 hover:border-clarity-teal/40"
                 }`}
               >
                 <span className="text-2xl">{p.icon}</span>
@@ -44,7 +45,7 @@ export function WhoIHelp() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
-              className="rounded-2xl border border-paper/15 bg-paper/[0.05] p-6 text-center"
+              className="rounded-xl border border-paper/15 bg-navy-soft p-6 text-center"
             >
               <p className="font-display text-lg italic text-paper/70">
                 “{current.quote}”

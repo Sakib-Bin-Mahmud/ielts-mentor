@@ -25,8 +25,6 @@ export function Hero() {
       className="relative overflow-hidden bg-paper pb-20 pt-32 sm:pb-28 sm:pt-40"
     >
       <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.35]" />
-      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-compass-gold/10 blur-3xl sm:h-96 sm:w-96" />
-      <div className="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 rounded-full bg-clarity-teal/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <motion.p
@@ -42,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="max-w-3xl text-balance font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-6xl"
+          className="max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.05] text-ink sm:text-5xl md:text-6xl"
         >
           {hero.title}
           <br />
@@ -66,13 +64,13 @@ export function Hero() {
         >
           <a
             href="#final-cta"
-            className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-clarity-teal"
+            className="rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-clarity-teal"
           >
             {hero.primaryCta}
           </a>
           <a
             href="#story"
-            className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper"
+            className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-navy hover:bg-navy hover:text-paper"
           >
             {hero.secondaryCta}
           </a>
@@ -83,7 +81,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-16 max-w-xl rounded-2xl border border-ink/10 bg-white/60 p-6 shadow-sm backdrop-blur-sm sm:p-8"
+          className="mt-16 max-w-xl rounded-xl border border-ink/10 bg-white p-6 shadow-sm sm:p-8"
         >
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft/60">
             {scoreScale.label}
@@ -92,7 +90,7 @@ export function Hero() {
           <div className="relative mb-4 mt-2">
             <div className="h-1.5 w-full rounded-full bg-ink/10">
               <div
-                className="h-1.5 rounded-full bg-gradient-to-r from-clarity-teal to-compass-gold transition-all"
+                className="h-1.5 rounded-full bg-clarity-teal transition-all"
                 style={{ width: `${percent}%` }}
               />
             </div>
@@ -113,9 +111,9 @@ export function Hero() {
             />
           </div>
 
-          <div className="mb-5 flex justify-between font-mono text-xs text-ink-soft/60">
+          <div className="mb-5 flex items-baseline justify-between font-mono text-xs text-ink-soft/60">
             <span>{scoreScale.min.toFixed(1)}</span>
-            <span className="font-semibold text-ink">{value.toFixed(1)}</span>
+            <span className="text-base font-semibold text-compass-gold">{value.toFixed(1)}</span>
             <span>{scoreScale.max.toFixed(1)}</span>
           </div>
 

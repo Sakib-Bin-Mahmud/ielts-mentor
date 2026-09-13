@@ -10,13 +10,14 @@ export function Philosophy() {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <section id="philosophy" className="scroll-mt-20 bg-ink py-20 text-paper sm:py-28">
-      <div className="mx-auto max-w-content px-5 sm:px-8">
+    <section id="philosophy" className="relative scroll-mt-20 overflow-hidden bg-navy py-20 text-paper sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-noise-dark opacity-[0.5]" />
+      <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <Reveal>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-compass-gold">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-clarity-teal">
             My IELTS Philosophy
           </p>
-          <h2 className="max-w-2xl text-balance font-display text-3xl leading-tight sm:text-4xl md:text-[2.75rem]">
+          <h2 className="max-w-2xl text-balance font-display text-3xl font-medium leading-tight sm:text-4xl md:text-[2.75rem]">
             {philosophyIntro}
           </h2>
         </Reveal>
@@ -31,7 +32,7 @@ export function Philosophy() {
                   onClick={() => setActive(isActive ? null : p.key)}
                   onMouseEnter={() => setActive(p.key)}
                   onMouseLeave={() => setActive((cur) => (cur === p.key ? null : cur))}
-                  className="group relative flex h-full w-full flex-col rounded-2xl border border-paper/15 bg-paper/[0.04] p-6 text-left transition-colors hover:border-compass-gold/60 hover:bg-paper/[0.08]"
+                  className="group relative flex h-full w-full flex-col rounded-xl border border-paper/15 p-6 text-left transition-colors hover:border-clarity-teal/50 hover:bg-navy-soft"
                 >
                   <span className="font-mono text-xs text-compass-gold/80">
                     0{i + 1}
@@ -55,7 +56,7 @@ export function Philosophy() {
                     )}
                   </AnimatePresence>
 
-                  <span className="mt-4 text-xs font-medium text-compass-gold/70 group-hover:text-compass-gold">
+                  <span className="mt-4 text-xs font-medium text-clarity-light/80 group-hover:text-clarity-light">
                     {isActive ? "Tap again to close" : "Tap to expand"}
                   </span>
                 </button>

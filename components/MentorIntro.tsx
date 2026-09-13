@@ -8,17 +8,17 @@ export function MentorIntro() {
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-ink/5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl bg-ink/5">
               <Placeholder
-                className="absolute inset-4 flex items-center justify-center rounded-2xl border-2 border-dashed border-ink/15 bg-white/40 text-center"
+                className="absolute inset-4 flex items-center justify-center rounded-lg border-2 border-dashed border-ink/15 bg-white/40 text-center"
                 label="Add your portrait photo"
               >
                 <span className="px-6 text-sm text-ink-soft/60">
                   [ Portrait photo ]
                 </span>
               </Placeholder>
-              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-ink px-5 py-4 text-paper shadow-lg">
-                <p className="font-mono text-2xl font-semibold leading-none">
+              <div className="absolute -bottom-4 -right-4 rounded-lg bg-navy px-5 py-4 text-paper shadow-lg">
+                <p className="font-mono text-2xl font-semibold leading-none text-compass-gold">
                   {mentor.credentials[0].value.split(" ")[0]}
                 </p>
                 <p className="mt-1 text-[10px] uppercase tracking-wider text-paper/70">
@@ -30,7 +30,7 @@ export function MentorIntro() {
 
           <div>
             <Reveal>
-              <h2 className="font-display text-3xl text-ink sm:text-4xl">
+              <h2 className="font-display text-3xl font-medium text-ink sm:text-4xl">
                 {mentorIntro.headline}
               </h2>
               <p className="mt-4 max-w-lg font-display text-xl italic text-clarity-teal">

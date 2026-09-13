@@ -67,7 +67,7 @@ export function MentorPassport() {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6 }}
-            className="absolute bottom-16 right-0 whitespace-nowrap rounded-lg bg-ink px-4 py-2 text-xs font-semibold text-paper shadow-lg"
+            className="absolute bottom-16 right-0 whitespace-nowrap rounded-lg bg-navy px-4 py-2 text-xs font-semibold text-compass-gold shadow-lg"
           >
             ✦ Unlocked: {passportMilestones.find((m) => m.key === justUnlocked)?.label}
           </motion.div>
@@ -78,9 +78,9 @@ export function MentorPassport() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Mentor passport progress"
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-paper shadow-lg transition-transform hover:scale-105"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-navy text-paper shadow-lg transition-transform hover:scale-105"
         >
-          <span className="font-mono text-xs font-semibold">
+          <span className="font-mono text-xs font-semibold text-compass-gold">
             {count}/{total}
           </span>
         </button>
@@ -92,7 +92,7 @@ export function MentorPassport() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 right-0 w-64 rounded-2xl border border-ink/10 bg-paper p-5 shadow-xl"
+              className="absolute bottom-16 right-0 w-64 rounded-xl border border-ink/10 bg-paper p-5 shadow-xl"
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft/50">
                 Mentor Passport
@@ -102,7 +102,7 @@ export function MentorPassport() {
                   <li key={m.key} className="flex items-center gap-2 text-sm">
                     <span
                       className={
-                        unlocked.has(m.key) ? "text-clarity-teal" : "text-ink-soft/30"
+                        unlocked.has(m.key) ? "text-compass-gold" : "text-ink-soft/30"
                       }
                     >
                       {unlocked.has(m.key) ? "✓" : "○"}

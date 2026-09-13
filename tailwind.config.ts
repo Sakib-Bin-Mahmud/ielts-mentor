@@ -9,9 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: {
+        // Surface color for full-bleed dark sections, primary buttons, and
+        // dark badges/panels.
+        navy: {
           DEFAULT: "#0B132B",
           soft: "#1C2541",
+        },
+        // Text color — kept distinct from `navy` so type always reads as
+        // ink on paper, never as a tinted surface.
+        ink: {
+          DEFAULT: "#111827",
+          soft: "#4B5563",
         },
         paper: {
           DEFAULT: "#F7F5F0",
@@ -54,9 +62,6 @@ const config: Config = {
           "Consolas",
           "monospace",
         ],
-      },
-      backgroundImage: {
-        grain: "radial-gradient(circle at 1px 1px, rgba(11,19,43,0.06) 1px, transparent 0)",
       },
       maxWidth: {
         content: "1180px",

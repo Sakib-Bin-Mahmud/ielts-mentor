@@ -17,7 +17,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-        scrolled ? "bg-paper/90 shadow-sm backdrop-blur-md" : "bg-transparent"
+        scrolled ? "border-b border-ink/[0.06] bg-paper shadow-sm" : "border-b border-transparent bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-content items-center justify-between px-5 py-4 sm:px-8">
@@ -41,7 +41,7 @@ export function Navbar() {
 
         <a
           href="#final-cta"
-          className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-clarity-teal md:inline-block"
+          className="hidden rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-clarity-teal md:inline-block"
         >
           Start Your Journey
         </a>
@@ -80,7 +80,7 @@ export function Navbar() {
           <a
             href="#final-cta"
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-full bg-ink px-5 py-3 text-center text-sm font-semibold text-paper"
+            className="mt-2 block rounded-full bg-navy px-5 py-3 text-center text-sm font-semibold text-paper"
           >
             Start Your Journey
           </a>

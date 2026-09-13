@@ -31,7 +31,7 @@ export function MentorCompass() {
           <div className="relative h-[340px] w-[340px]">
             <div className="absolute inset-10 rounded-full border border-dashed border-ink/15" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex h-28 w-28 items-center justify-center rounded-full bg-ink text-paper shadow-lg">
+              <div className="flex h-28 w-28 items-center justify-center rounded-full bg-navy text-paper shadow-md">
                 <span className="font-display text-lg italic">You</span>
               </div>
             </div>
@@ -42,8 +42,8 @@ export function MentorCompass() {
                 onClick={() => setActive(d.key)}
                 className={`absolute ${posClasses[d.position]} flex h-20 w-20 flex-col items-center justify-center rounded-full border-2 text-center transition-all ${
                   active === d.key
-                    ? "border-compass-gold bg-compass-gold text-ink shadow-lg scale-110"
-                    : "border-ink/15 bg-white/70 text-ink-soft hover:border-compass-gold/60"
+                    ? "border-clarity-teal bg-clarity-teal text-paper shadow-md scale-110"
+                    : "border-ink/15 bg-paper text-ink-soft hover:border-clarity-teal/50"
                 }`}
               >
                 <span className="text-[11px] font-semibold uppercase tracking-wide">
@@ -62,9 +62,9 @@ export function MentorCompass() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
-              className="rounded-2xl border border-ink/10 bg-white/70 p-6"
+              className="rounded-xl border border-ink/10 bg-white p-6"
             >
-              <p className="text-xs font-semibold uppercase tracking-wider text-compass-gold">
+              <p className="text-xs font-semibold uppercase tracking-wider text-clarity-teal">
                 {current.label}
               </p>
               <p className="mt-3 font-display text-xl italic leading-snug text-ink">
@@ -84,11 +84,11 @@ export function MentorCompass() {
                 onClick={() => setActive(isActive ? d.key : d.key)}
                 className={`rounded-xl border p-4 text-left transition-colors ${
                   isActive
-                    ? "border-compass-gold bg-compass-gold/10"
-                    : "border-ink/10 bg-white/60"
+                    ? "border-clarity-teal bg-clarity-teal/10"
+                    : "border-ink/10 bg-paper"
                 }`}
               >
-                <p className="text-xs font-semibold uppercase tracking-wider text-compass-gold">
+                <p className="text-xs font-semibold uppercase tracking-wider text-clarity-teal">
                   {d.label}
                 </p>
                 <p className="mt-1 text-sm italic text-ink-soft/80">
