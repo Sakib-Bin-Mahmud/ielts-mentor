@@ -11,7 +11,7 @@ philosophy, method, and a path to a conversation.
 
 ```bash
 npm install
-npm run dev       # http://localhost:3000
+npm run dev       # http://localhost:4000
 ```
 
 ```bash
