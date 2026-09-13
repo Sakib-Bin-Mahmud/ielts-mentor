@@ -31,7 +31,7 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Your IELTS Journey Starts Here",
+  eyebrow: "IELTS Mentor",
   title: "IELTS is not just a test.",
   titleAccent: "It's a journey. Let's navigate it together.",
   subtitle:
@@ -40,19 +40,11 @@ export const hero = {
   secondaryCta: "Meet Your Mentor",
 };
 
+// Drives the hero's compact "current → goal" band-score element.
 export const scoreScale = {
-  label: "YOUR GOAL",
-  min: 6.0,
-  max: 8.0,
-  startDefault: 6.0,
-  goalDefault: 7.5,
-  messages: [
-    { at: 6.0, text: "You have a foundation. Now you need direction." },
-    { at: 6.5, text: "You're closer than you think." },
-    { at: 7.0, text: "Strategy starts making a bigger difference." },
-    { at: 7.5, text: "Precision matters." },
-    { at: 8.0, text: "This is where clarity becomes mastery." },
-  ],
+  label: "Target Band",
+  current: 6.0,
+  goal: 7.5,
 };
 
 export const mentorIntro = {
