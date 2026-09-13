@@ -98,21 +98,20 @@ lib/
 
 ## Fonts
 
-To restore the originally-specified Google Fonts (Fraunces for headings,
-Inter for body, JetBrains Mono for numerals), once you have network access:
+The site loads three Google Fonts via `next/font/google` in `app/layout.tsx`,
+exposed as CSS variables and wired into the `display`/`sans`/`mono` stacks in
+`tailwind.config.ts`:
 
-```tsx
-// app/layout.tsx
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+- **Playfair Display** (`font-display`) — hero headlines, section titles,
+  large quotes. Editorial, premium, expressive.
+- **Inter** (`font-sans`) — body copy, navigation, buttons, cards, labels.
+  Clean and highly readable.
+- **DM Mono** (`font-mono`) — band scores, journey stages, milestone badges,
+  and other small technical/gamified numerals.
 
-const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", weight: ["400","500","600","700"], style: ["normal","italic"] });
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["400","500","600","700"] });
-const jbmono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jbmono", weight: ["400","500","600"] });
-```
-
-Then add the three `.variable` classes to the `<html>` tag, and swap the
-`display`/`sans`/`mono` font stacks in `tailwind.config.ts` back to
-`var(--font-fraunces)`, `var(--font-inter)`, `var(--font-jbmono)`.
+`next/font` self-hosts the font files at build time (no runtime request to
+Google), so this needs network access only during `npm run build`/`next dev`,
+not in production.
 
 ## Deploying
 
