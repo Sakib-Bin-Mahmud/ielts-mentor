@@ -159,6 +159,9 @@ export function Hero() {
                   ✦
                 </span>
               </div>
+
+              {/* Subtle film-grain texture, ties the photo to the site's paper-grain motif */}
+              <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.2]" />
             </div>
 
             {/* Print-style registration marks at the frame's corners */}

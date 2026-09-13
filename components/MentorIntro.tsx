@@ -8,23 +8,27 @@ export function MentorIntro() {
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl bg-ink/5">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-ink/10 bg-ink/5 md:max-w-none">
               <Placeholder
                 className="absolute inset-4 flex items-center justify-center rounded-lg border-2 border-dashed border-ink/15 bg-white/40 text-center"
-                label="Add your portrait photo"
+                label="Add a natural teaching/speaking photo"
               >
                 <span className="px-6 text-sm text-ink-soft/60">
-                  [ Portrait photo ]
+                  [ Mentor / speaking photo ]
                 </span>
               </Placeholder>
-              <div className="absolute -bottom-4 -right-4 rounded-lg bg-navy px-5 py-4 text-paper shadow-lg">
-                <p className="font-mono text-2xl font-semibold leading-none text-compass-gold">
-                  {mentor.credentials[0].value.split(" ")[0]}
-                </p>
-                <p className="mt-1 text-[10px] uppercase tracking-wider text-paper/70">
-                  {mentor.credentials[0].label}
-                </p>
-              </div>
+              {/* Subtle film-grain texture, matches the hero portrait's treatment */}
+              <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.15]" />
+            </div>
+
+            {/* Credential stat, adjacent to (not overlapping) the photo */}
+            <div className="mx-auto mt-4 flex max-w-sm items-baseline gap-2 md:max-w-none">
+              <p className="font-mono text-lg font-semibold text-compass-gold">
+                {mentor.credentials[0].value.split(" ")[0]}
+              </p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                {mentor.credentials[0].label}
+              </p>
             </div>
           </Reveal>
 
