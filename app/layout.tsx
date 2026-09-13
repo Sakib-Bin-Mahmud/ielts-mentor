@@ -1,13 +1,24 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { mentor } from "@/lib/content";
 
-// Note: this build intentionally avoids next/font/google so the project
-// builds with zero external network calls. The font stacks in
-// tailwind.config.ts use polished system-font fallbacks. To use a real
-// Google Font (e.g. Fraunces + Inter, as originally designed), re-add
-// next/font/google imports here once you have network access — see
-// README.md "Fonts" section for the exact snippet.
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+});
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
   title: `${mentor.name} — IELTS Mentor in Dhaka | Clarity, Strategy, Confidence`,
@@ -38,7 +49,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${playfairDisplay.variable} ${inter.variable} ${dmMono.variable}`}
+    >
       <body className="font-sans antialiased bg-paper text-ink">{children}</body>
     </html>
   );

@@ -10,30 +10,27 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#14171F",
-          soft: "#2A2E3A",
+          DEFAULT: "#0B132B",
+          soft: "#1C2541",
         },
         paper: {
-          DEFAULT: "#FAF7F0",
-          dim: "#F1ECE0",
+          DEFAULT: "#F7F5F0",
+          dim: "#EFEAE0",
         },
         compass: {
-          gold: "#C79A4B",
-          light: "#E6C88A",
+          gold: "#F2C94C",
+          light: "#F6DA82",
         },
         clarity: {
-          teal: "#1F6E63",
-          light: "#2F8F80",
-        },
-        confidence: {
-          coral: "#C4573B",
+          teal: "#2563EB",
+          light: "#7CC7FF",
         },
       },
       fontFamily: {
-        // Editorial serif stack for headings/display copy (no external font
-        // fetch required — swap in a self-hosted or Google Font at deploy
-        // time by adding it to this stack, see README "Fonts" section).
+        // Loaded via next/font/google in app/layout.tsx as CSS variables;
+        // the stacks below are the fallback chain if a variable is unset.
         display: [
+          "var(--font-playfair)",
           "Iowan Old Style",
           "Palatino Linotype",
           "Georgia",
@@ -41,15 +38,16 @@ const config: Config = {
           "serif",
         ],
         sans: [
+          "var(--font-inter)",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
-          "Inter",
           "Helvetica Neue",
           "Arial",
           "sans-serif",
         ],
         mono: [
+          "var(--font-dm-mono)",
           "ui-monospace",
           "SFMono-Regular",
           "Menlo",
@@ -58,7 +56,7 @@ const config: Config = {
         ],
       },
       backgroundImage: {
-        grain: "radial-gradient(circle at 1px 1px, rgba(20,23,31,0.06) 1px, transparent 0)",
+        grain: "radial-gradient(circle at 1px 1px, rgba(11,19,43,0.06) 1px, transparent 0)",
       },
       maxWidth: {
         content: "1180px",
