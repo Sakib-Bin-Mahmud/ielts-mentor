@@ -69,14 +69,55 @@ export function Hero() {
             </a>
           </motion.div>
 
-          <motion.p
+          {/* Compact interactive band-score element */}
+          <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-xs text-ink-soft/50"
+            className="mt-10 flex max-w-md items-end gap-6"
           >
-            {mentor.credentials.map((c) => `${c.label}: ${c.value}`).join(" · ")}
-          </motion.p>
+            <div className="shrink-0">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                {scoreScale.label}
+              </p>
+              <p className="mt-1 font-mono text-3xl font-semibold text-compass-gold">
+                {scoreScale.goal.toFixed(1)}
+              </p>
+            </div>
+
+            <div className="flex-1 pb-1">
+              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                Current <span aria-hidden>→</span> Goal
+              </p>
+              <div className="relative">
+                <div className="h-1 w-full rounded-full bg-ink/10">
+                  <div
+                    className="h-1 rounded-full bg-clarity-teal transition-all"
+                    style={{ width: `${percent}%` }}
+                  />
+                </div>
+                <input
+                  type="range"
+                  min={scoreScale.current}
+                  max={scoreScale.goal}
+                  step={0.5}
+                  value={value}
+                  onChange={(e) => setValue(parseFloat(e.target.value))}
+                  aria-label="Drag to explore your journey from your current band to your goal band"
+                  className="absolute inset-x-0 top-1/2 h-1 w-full -translate-y-1/2 cursor-pointer appearance-none bg-transparent
+                    [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:appearance-none
+                    [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-navy
+                    [&::-webkit-slider-thumb]:bg-paper [&::-webkit-slider-thumb]:shadow-sm
+                    [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:rounded-full
+                    [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-navy [&::-moz-range-thumb]:bg-paper"
+                />
+              </div>
+              <div className="mt-2 flex justify-between font-mono text-[10px] text-ink-soft/50">
+                <span>{scoreScale.current.toFixed(1)}</span>
+                <span>{scoreScale.goal.toFixed(1)}</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* RIGHT — editorial portrait */}
@@ -126,50 +167,10 @@ export function Hero() {
             <span aria-hidden className="pointer-events-none absolute -bottom-2 -left-2 h-4 w-4 border-b-2 border-l-2 border-ink/25" />
           </div>
 
-          {/* Compact interactive band-score element, adjacent to the portrait */}
-          <div className="mt-6 flex items-end gap-6">
-            <div className="shrink-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
-                {scoreScale.label}
-              </p>
-              <p className="mt-1 font-mono text-3xl font-semibold text-compass-gold">
-                {scoreScale.goal.toFixed(1)}
-              </p>
-            </div>
-
-            <div className="flex-1 pb-1">
-              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
-                Current <span aria-hidden>→</span> Goal
-              </p>
-              <div className="relative">
-                <div className="h-1 w-full rounded-full bg-ink/10">
-                  <div
-                    className="h-1 rounded-full bg-clarity-teal transition-all"
-                    style={{ width: `${percent}%` }}
-                  />
-                </div>
-                <input
-                  type="range"
-                  min={scoreScale.current}
-                  max={scoreScale.goal}
-                  step={0.5}
-                  value={value}
-                  onChange={(e) => setValue(parseFloat(e.target.value))}
-                  aria-label="Drag to explore your journey from your current band to your goal band"
-                  className="absolute inset-x-0 top-1/2 h-1 w-full -translate-y-1/2 cursor-pointer appearance-none bg-transparent
-                    [&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:appearance-none
-                    [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-navy
-                    [&::-webkit-slider-thumb]:bg-paper [&::-webkit-slider-thumb]:shadow-sm
-                    [&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:rounded-full
-                    [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-navy [&::-moz-range-thumb]:bg-paper"
-                />
-              </div>
-              <div className="mt-2 flex justify-between font-mono text-[10px] text-ink-soft/50">
-                <span>{scoreScale.current.toFixed(1)}</span>
-                <span>{scoreScale.goal.toFixed(1)}</span>
-              </div>
-            </div>
-          </div>
+          {/* Credential trust line, below the portrait */}
+          <p className="mt-6 text-center text-xs text-ink-soft/50 lg:text-left">
+            {mentor.credentials.map((c) => `${c.label}: ${c.value}`).join(" · ")}
+          </p>
         </motion.div>
       </div>
     </section>
