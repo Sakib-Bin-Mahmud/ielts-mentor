@@ -7,17 +7,17 @@ html {
 }
 
 body {
-  background-color: #faf7f0;
-  color: #14171f;
+  background-color: #f7f5f0;
+  color: #0b132b;
 }
 
 ::selection {
-  background: #c79a4b;
-  color: #14171f;
+  background: #f2c94c;
+  color: #0b132b;
 }
 
 .bg-noise {
-  background-image: radial-gradient(rgba(20, 23, 31, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(11, 19, 43, 0.05) 1px, transparent 1px);
   background-size: 18px 18px;
 }
 

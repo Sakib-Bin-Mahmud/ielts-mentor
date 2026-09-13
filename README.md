@@ -75,9 +75,11 @@ lib/
 
 ## Design notes
 
-- **Palette**: warm paper (#FAF7F0) background, deep ink (#14171F) for
-  contrast sections, compass gold (#C79A4B) as the signature accent, clarity
-  teal (#1F6E63) as a secondary accent. Defined in `tailwind.config.ts`.
+- **Palette**: "Midnight Mentor" — warm paper (#F7F5F0) background, midnight
+  navy ink (#0B132B) for contrast sections and text, cobalt blue (#2563EB)
+  as the primary interactive accent with sky blue (#7CC7FF) as its lighter
+  highlight, and warm gold (#F2C94C) reserved for achievement/milestone
+  moments (band scores, unlocked badges). Defined in `tailwind.config.ts`.
 - **Fonts**: the build ships with a polished system-font fallback stack
   (no external network call required to build or run it). If you want the
   originally-designed editorial serif (Fraunces) + humanist sans (Inter),
