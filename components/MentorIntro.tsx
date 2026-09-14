@@ -6,7 +6,7 @@ export function MentorIntro() {
   return (
     <section className="relative bg-paper-dim py-20 sm:py-28">
       <div className="mx-auto max-w-content px-5 sm:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr]">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal>
             <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-ink/10 bg-ink/5 md:max-w-none">
               <Placeholder

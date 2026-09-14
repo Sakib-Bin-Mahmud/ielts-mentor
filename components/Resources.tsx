@@ -12,12 +12,12 @@ export function Resources() {
           title="Writing worth reading, not a course catalog"
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {resources.map((r, i) => (
             <Reveal key={r.title} delay={Math.min(i * 0.06, 0.24)}>
               <a
                 href="#"
-                className="group flex h-full flex-col rounded-xl border border-ink/10 bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-clarity-teal/40 hover:shadow-md"
+                className="group flex h-full flex-col rounded-xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-clarity-teal/40 hover:shadow-md"
               >
                 <span className="text-xs font-semibold uppercase tracking-wider text-clarity-teal">
                   {r.category}

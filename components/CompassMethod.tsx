@@ -12,10 +12,10 @@ export function CompassMethod() {
           subtitle="A repeatable framework — adapted to each student, never applied as a rigid template."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {compassMethod.steps.map((step, i) => (
             <Reveal key={i} delay={Math.min(i * 0.05, 0.3)}>
-              <div className="flex h-full flex-col rounded-xl border border-ink/10 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-clarity-teal/40">
+              <div className="flex h-full flex-col rounded-xl border border-ink/10 bg-white p-7 transition-all hover:-translate-y-0.5 hover:border-clarity-teal/40">
                 <span className="font-display text-4xl font-semibold text-compass-gold">
                   {step.letter}
                 </span>

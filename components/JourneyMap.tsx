@@ -12,11 +12,11 @@ export function JourneyMap() {
         />
 
         <div className="mt-14 overflow-x-auto pb-4">
-          <ol className="flex min-w-[720px] items-stretch gap-3 sm:min-w-0 sm:flex-wrap sm:gap-4">
+          <ol className="flex min-w-[720px] items-stretch gap-4 sm:min-w-0 sm:flex-wrap">
             {journeyMap.map((stage, i) => (
-              <li key={stage.key} className="flex flex-1 items-center gap-3">
+              <li key={stage.key} className="flex flex-1 items-center gap-3 sm:flex-none sm:basis-[224px]">
                 <Reveal delay={Math.min(i * 0.04, 0.3)} className="flex-1">
-                  <div className="h-full rounded-xl border border-ink/10 bg-paper-dim px-4 py-5">
+                  <div className="h-full rounded-xl border border-ink/10 bg-paper-dim px-5 py-6">
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-widest text-compass-gold">
                       {String(i + 1).padStart(2, "0")}
                     </p>
@@ -37,7 +37,7 @@ export function JourneyMap() {
         </div>
 
         {/* Band score as visual language */}
-        <div className="mt-20 grid grid-cols-2 gap-4 border-t border-ink/10 pt-14 sm:grid-cols-4">
+        <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-ink/10 pt-14 sm:grid-cols-4">
           {bandLanguage.map((b, i) => (
             <Reveal key={b.score} delay={Math.min(i * 0.06, 0.3)} className="text-center">
               <p className="font-mono text-4xl font-semibold text-ink sm:text-5xl">

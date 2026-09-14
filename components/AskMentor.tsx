@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function AskMentor() {
   return (
-    <section className="bg-clarity-teal py-20 text-paper sm:py-24">
+    <section className="bg-clarity-teal py-20 text-paper sm:py-28">
       <div className="mx-auto max-w-content px-5 text-center sm:px-8">
         <Reveal>
           <h2 className="font-display text-3xl font-medium sm:text-4xl">{askMentor.title}</h2>
