@@ -1,6 +1,7 @@
 import { achievements } from "@/lib/content";
 import { Reveal } from "./Reveal";
 import { Placeholder } from "./Placeholder";
+import { Counter } from "./Counter";
 
 export function Achievements() {
   return (
@@ -14,7 +15,7 @@ export function Achievements() {
                 {a.placeholder ? (
                   <Placeholder label="Use a real number only">{a.value}</Placeholder>
                 ) : (
-                  a.value
+                  <Counter value={a.value} />
                 )}
               </p>
               <p className="mt-2 text-[11px] font-semibold uppercase tracking-widest text-paper/60">

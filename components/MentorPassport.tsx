@@ -80,18 +80,21 @@ export function MentorPassport() {
 
       <div className="relative">
         {/* Small floating indicator — a gold ring only appears once there's real progress */}
-        <button
+        <motion.button
           onClick={() => setOpen((v) => !v)}
           aria-label="Mentor passport — track of what you've explored"
           aria-expanded={open}
-          className={`flex h-12 w-12 items-center justify-center rounded-full bg-navy text-paper shadow-md transition-all duration-300 hover:scale-105 ${
+          whileHover={{ scale: 1.05 }}
+          animate={justUnlocked ? { scale: [1, 1.18, 1] } : { scale: 1 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className={`flex h-12 w-12 items-center justify-center rounded-full bg-navy text-paper shadow-md transition-shadow duration-300 ${
             count > 0 ? "ring-1 ring-compass-gold/50 ring-offset-2 ring-offset-paper" : ""
           }`}
         >
           <span className="font-mono text-[11px] font-medium">
             {count}/{total}
           </span>
-        </button>
+        </motion.button>
 
         <AnimatePresence>
           {open && (

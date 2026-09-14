@@ -27,13 +27,13 @@ export function FinalCTA() {
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <a
               href="#ask"
-              className="rounded-full bg-compass-gold px-8 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
+              className="rounded-full bg-compass-gold px-8 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
             >
               {finalCta.primary}
             </a>
             <a
               href="#ask"
-              className="rounded-full border border-paper/30 px-8 py-3.5 text-sm font-semibold text-paper transition-colors hover:bg-paper hover:text-ink"
+              className="rounded-full border border-paper/30 px-8 py-3.5 text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-paper hover:text-ink"
             >
               {finalCta.secondary}
             </a>

@@ -34,23 +34,33 @@ export function WhoIHelp() {
                 <button
                   key={p.key}
                   onClick={() => setActive(p.key)}
-                  className="group flex items-baseline gap-4 py-5 text-left sm:gap-5"
+                  className="group flex items-baseline justify-between gap-4 py-5 text-left sm:gap-5"
                 >
-                  <span
-                    className={`font-mono text-xs shrink-0 transition-colors duration-300 ${
-                      isActive ? "text-compass-gold" : "text-paper/30"
-                    }`}
-                  >
-                    0{i + 1}
+                  <span className="flex items-baseline gap-4 sm:gap-5">
+                    <span
+                      className={`font-mono text-xs shrink-0 transition-colors duration-300 ${
+                        isActive ? "text-compass-gold" : "text-paper/30"
+                      }`}
+                    >
+                      0{i + 1}
+                    </span>
+                    <span
+                      className={`text-balance font-display uppercase leading-tight tracking-tight transition-all duration-300 ${
+                        isActive
+                          ? "text-2xl font-medium text-paper sm:text-3xl"
+                          : "text-xl text-paper/35 group-hover:text-paper/60 sm:text-2xl"
+                      }`}
+                    >
+                      {p.title}
+                    </span>
                   </span>
                   <span
-                    className={`text-balance font-display uppercase leading-tight tracking-tight transition-all duration-300 ${
-                      isActive
-                        ? "text-2xl font-medium text-paper sm:text-3xl"
-                        : "text-xl text-paper/35 group-hover:text-paper/60 sm:text-2xl"
+                    aria-hidden
+                    className={`shrink-0 text-lg transition-all duration-300 group-hover:translate-x-1 ${
+                      isActive ? "text-compass-gold" : "text-paper/0 group-hover:text-paper/40"
                     }`}
                   >
-                    {p.title}
+                    →
                   </span>
                 </button>
               );
@@ -86,9 +96,12 @@ export function WhoIHelp() {
 
                 <a
                   href="#final-cta"
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-paper transition-colors hover:text-clarity-light"
+                  className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-paper transition-colors hover:text-clarity-light"
                 >
-                  {current.cta} <span aria-hidden>→</span>
+                  {current.cta}{" "}
+                  <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
                 </a>
               </motion.div>
             </AnimatePresence>

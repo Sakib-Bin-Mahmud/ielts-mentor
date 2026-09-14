@@ -36,7 +36,7 @@ export function StudentStories() {
         <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-8">
           {studentStories.map((s, i) => (
             <Reveal key={s.key} delay={Math.min(i * 0.08, 0.24)}>
-              <div className="flex h-full flex-col border-t border-ink/15 pt-6">
+              <div className="flex h-full flex-col border-t border-ink/15 pt-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-clarity-teal/40">
                 <Stage eyebrow="Before">
                   <p className="font-display text-4xl font-normal leading-none text-ink-soft/70 sm:text-5xl">
                     {s.placeholder ? (

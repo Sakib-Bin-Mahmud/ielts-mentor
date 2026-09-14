@@ -136,7 +136,7 @@ export function MentorCompass() {
                   key={d.key}
                   onMouseEnter={() => setActive(d.key)}
                   onClick={() => setActive(d.key)}
-                  className={`absolute ${layout.flex} ${nodePosClasses[position]}`}
+                  className={`absolute transition-transform duration-300 hover:scale-105 ${layout.flex} ${nodePosClasses[position]}`}
                 >
                   {layout.order.map((part) => (part === "dot" ? dot : label))}
                 </button>
@@ -173,7 +173,7 @@ export function MentorCompass() {
               <button
                 key={d.key}
                 onClick={() => setActive(d.key)}
-                className={`rounded-xl border p-4 text-left transition-colors ${
+                className={`rounded-xl border p-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${
                   isActive ? "border-clarity-teal bg-clarity-teal/10" : "border-paper/15"
                 }`}
               >

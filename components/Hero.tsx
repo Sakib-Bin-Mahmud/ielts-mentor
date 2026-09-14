@@ -57,13 +57,13 @@ export function Hero() {
           >
             <a
               href="#final-cta"
-              className="rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:bg-clarity-teal"
+              className="rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-clarity-teal hover:shadow-md"
             >
               {hero.primaryCta}
             </a>
             <a
               href="#story"
-              className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-navy hover:bg-navy hover:text-paper"
+              className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-navy hover:bg-navy hover:text-paper"
             >
               {hero.secondaryCta}
             </a>

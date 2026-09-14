@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { mentor } from "@/lib/content";
+import { MotionProvider } from "@/components/MotionProvider";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -53,7 +54,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfairDisplay.variable} ${inter.variable} ${dmMono.variable}`}
     >
-      <body className="font-sans antialiased bg-paper text-ink">{children}</body>
+      <body className="font-sans antialiased bg-paper text-ink">
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }

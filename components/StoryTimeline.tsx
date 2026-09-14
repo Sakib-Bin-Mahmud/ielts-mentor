@@ -34,14 +34,14 @@ export function StoryTimeline() {
           <div className="absolute left-[7px] top-1 hidden h-full w-px bg-ink/10 sm:block" />
           <ol className="space-y-10 sm:space-y-14">
             {storyTimeline.map((chapter, i) => (
-              <li key={i} className="relative sm:pl-10">
+              <li key={i} className="group relative sm:pl-10">
                 <Reveal delay={Math.min(i * 0.05, 0.3)}>
-                  <span className="absolute left-0 top-1.5 hidden h-3.5 w-3.5 rounded-full border-2 border-compass-gold bg-paper sm:block" />
+                  <span className="absolute left-0 top-1.5 hidden h-3.5 w-3.5 rounded-full border-2 border-compass-gold bg-paper transition-transform duration-300 group-hover:scale-125 sm:block" />
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                     <span className="font-mono text-xs font-semibold uppercase tracking-wider text-compass-gold">
                       {chapter.year}
                     </span>
-                    <h3 className="font-display text-xl text-ink sm:text-2xl">
+                    <h3 className="font-display text-xl text-ink transition-colors duration-300 group-hover:text-clarity-teal sm:text-2xl">
                       {chapter.title}
                     </h3>
                   </div>
