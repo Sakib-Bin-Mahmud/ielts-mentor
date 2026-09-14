@@ -231,27 +231,30 @@ export const services = [
   {
     key: "core",
     title: "1:1 IELTS Mentoring",
-    text: "Personalized guidance throughout your entire IELTS journey — not a fixed syllabus, a plan built around you.",
+    short: "Personalized guidance around the candidate's goals.",
+    detail:
+      "Not a fixed syllabus — a plan built around your timeline, your target band, and the sections that actually need work.",
   },
   {
     key: "writing",
     title: "Writing Mentoring",
-    text: "Focused guidance for candidates struggling with Writing Task 1 and Task 2 — structure, coherence, and precision.",
+    short: "Focused guidance for IELTS Writing.",
+    detail:
+      "Task 1 and Task 2 — structure, coherence, and the precision that separates a 6 from a 7.5.",
   },
   {
     key: "speaking",
     title: "Speaking Mentoring",
-    text: "Individual feedback and confidence-building for the Speaking test, built around how you actually talk.",
+    short: "Individual feedback and confidence building.",
+    detail:
+      "Built around how you actually talk, not a rehearsed script — so it holds up under real exam pressure.",
   },
   {
     key: "strategy",
-    title: "IELTS Strategy Session",
-    text: "A focused, one-time conversation about your goals, challenges, and preparation direction.",
-  },
-  {
-    key: "flexible",
-    title: "Personalized Guidance",
-    text: "Flexible mentoring shaped around your situation, timeline, and target band.",
+    title: "Strategy Session",
+    short: "A focused conversation around direction and preparation.",
+    detail:
+      "One conversation to map your goals, challenges, and the most efficient path from where you are to your target band.",
   },
 ];
 
