@@ -328,6 +328,7 @@ export const passportMilestones = [
   { key: "philosophy", label: "The Philosophy", sectionId: "philosophy" },
   { key: "method", label: "The Method", sectionId: "method" },
   { key: "stories", label: "Student Stories", sectionId: "stories" },
+  { key: "resources", label: "Resources", sectionId: "resources" },
   { key: "next", label: "Your Next Step", sectionId: "final-cta" },
 ];
 
