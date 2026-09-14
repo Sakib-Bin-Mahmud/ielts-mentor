@@ -12,7 +12,6 @@ import { StudentStories } from "@/components/StudentStories";
 import { Testimonials } from "@/components/Testimonials";
 import { Achievements } from "@/components/Achievements";
 import { Resources } from "@/components/Resources";
-import { AskMentor } from "@/components/AskMentor";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { MentorPassport } from "@/components/MentorPassport";
@@ -47,11 +46,7 @@ export default function Home() {
       <Achievements />
       <SectionDivider index="12" label="Resources" from="navy" to="paper-dim" />
       <Resources />
-      <SectionDivider index="13" label="Ask Me Anything" from="paper-dim" to="accent" />
-      <div id="ask">
-        <AskMentor />
-      </div>
-      <SectionDivider index="14" label="Your Next Step" from="accent" to="navy" />
+      <SectionDivider index="13" label="Your Next Step" from="paper-dim" to="navy" />
       <FinalCTA />
       <Footer />
       <MentorPassport />

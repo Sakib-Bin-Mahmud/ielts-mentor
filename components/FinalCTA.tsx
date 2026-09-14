@@ -26,13 +26,13 @@ export function FinalCTA() {
         <Reveal delay={0.3}>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <a
-              href="#ask"
+              href="#final-cta"
               className="rounded-full bg-compass-gold px-8 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
             >
               {finalCta.primary}
             </a>
             <a
-              href="#ask"
+              href="#final-cta"
               className="rounded-full border border-paper/30 px-8 py-3.5 text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-paper hover:text-ink"
             >
               {finalCta.secondary}
