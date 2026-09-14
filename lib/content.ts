@@ -124,13 +124,6 @@ export const philosophyPrinciples = [
       "Doing ten more practice tests without feedback just repeats the same mistakes ten more times. Targeted feedback is what actually moves the score.",
   },
   {
-    key: "consistency",
-    title: "Consistency over intensity",
-    short: "Sustainable preparation beats random bursts of effort.",
-    detail:
-      "A calm, steady routine over a few weeks beats a frantic cramming sprint the night before — and it's far easier on your confidence.",
-  },
-  {
     key: "individuality",
     title: "Individuality over templates",
     short: "Your preparation should reflect your actual weaknesses and goals.",
