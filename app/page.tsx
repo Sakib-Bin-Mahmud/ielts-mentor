@@ -53,7 +53,6 @@ export default function Home() {
       </div>
       <SectionDivider index="14" label="Your Next Step" from="accent" to="navy" />
       <FinalCTA />
-      <SectionDivider from="navy" to="paper" />
       <Footer />
       <MentorPassport />
     </main>
