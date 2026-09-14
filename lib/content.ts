@@ -195,35 +195,35 @@ export const bandLanguage = [
 export const personas = [
   {
     key: "applicant",
-    icon: "🎓",
     title: "The University Applicant",
     quote: "I need the score for my next academic chapter.",
     message:
       "University deadlines don't move. We'll build a plan around your timeline, not an open-ended one.",
+    cta: "Plan your application timeline",
   },
   {
     key: "professional",
-    icon: "🌍",
     title: "The Future Global Professional",
     quote: "IELTS is part of a bigger career plan.",
     message:
       "For you, IELTS is one milestone among several. We'll treat it that way — efficient, not all-consuming.",
+    cta: "Talk about your career plan",
   },
   {
     key: "band7",
-    icon: "🚀",
     title: "The Band 7+ Candidate",
-    quote: "I'm close — but I need to break through.",
+    quote: "I'm close — but I can't break through.",
     message:
-      "The last half-band is rarely about more English. It's about precision. That's exactly where mentoring earns its place.",
+      "At this stage, doing more isn't always the answer. Understanding exactly where your marks are being lost becomes more important.",
+    cta: "Find out where you're losing marks",
   },
   {
     key: "beginner",
-    icon: "🧭",
     title: "The Confused Beginner",
     quote: "I don't know where to start.",
     message:
       "That's normal, and it's fixable. The first session is just about building a clear starting map.",
+    cta: "Get your starting map",
   },
 ];
 
