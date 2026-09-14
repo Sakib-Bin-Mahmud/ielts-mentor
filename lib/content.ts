@@ -374,9 +374,10 @@ export const askMentor = {
 };
 
 export const finalCta = {
-  title: "Your IELTS goal is part of a bigger story.",
+  title: "Your IELTS goal is part of",
+  titleAccent: "a bigger story.",
   subtitle: "Let's make sure you know where you're going — and how to get there.",
-  primary: "Start Your IELTS Journey",
+  primary: "Start Your Journey",
   secondary: "Talk to Me",
 };
 

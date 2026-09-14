@@ -1,4 +1,4 @@
-import { finalCta } from "@/lib/content";
+import { finalCta, bandLanguage } from "@/lib/content";
 import { Reveal } from "./Reveal";
 
 export function FinalCTA() {
@@ -11,14 +11,20 @@ export function FinalCTA() {
 
       <div className="relative mx-auto max-w-content px-5 text-center sm:px-8">
         <Reveal>
-          <h2 className="text-balance font-display text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">
-            {finalCta.title}
+          <h2 className="mx-auto max-w-3xl text-balance font-display text-4xl font-medium leading-tight sm:text-5xl md:text-6xl">
+            {finalCta.title} <span className="italic text-compass-gold">{finalCta.titleAccent}</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-lg text-paper/75">
-            {finalCta.subtitle}
-          </p>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-paper/75">{finalCta.subtitle}</p>
+        </Reveal>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
+        {/* Subtle journey line, leading down toward the CTA */}
+        <Reveal delay={0.2} className="flex flex-col items-center">
+          <span aria-hidden className="mt-8 h-10 w-px bg-paper/20" />
+          <span aria-hidden className="-mt-0.5 h-1.5 w-1.5 rounded-full bg-compass-gold" />
+        </Reveal>
+
+        <Reveal delay={0.3}>
+          <div className="mt-7 flex flex-wrap justify-center gap-4">
             <a
               href="#ask"
               className="rounded-full bg-compass-gold px-8 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
@@ -31,6 +37,17 @@ export function FinalCTA() {
             >
               {finalCta.secondary}
             </a>
+          </div>
+
+          {/* Band-score marker — an illustrative range, not a promised outcome */}
+          <div className="mx-auto mt-16 flex max-w-sm items-center gap-3">
+            <span className="font-mono text-xs text-paper/35">{bandLanguage[0].score}</span>
+            <span aria-hidden className="h-px flex-1 bg-paper/15" />
+            <span className="font-mono text-xs text-paper/35">{bandLanguage[1].score}</span>
+            <span aria-hidden className="h-px flex-1 bg-paper/15" />
+            <span className="font-mono text-xs text-paper/35">{bandLanguage[2].score}</span>
+            <span aria-hidden className="h-px flex-1 bg-paper/15" />
+            <span className="font-mono text-xs text-paper/35">{bandLanguage[3].score}</span>
           </div>
         </Reveal>
       </div>
