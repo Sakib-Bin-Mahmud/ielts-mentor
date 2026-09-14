@@ -16,28 +16,44 @@ import { AskMentor } from "@/components/AskMentor";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { MentorPassport } from "@/components/MentorPassport";
+import { SectionDivider } from "@/components/SectionDivider";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
+      <SectionDivider index="01" from="paper" to="paper-dim" />
       <MentorIntro />
+      <SectionDivider index="02" from="paper-dim" to="paper" />
       <StoryTimeline />
+      <SectionDivider index="03" label="The Philosophy" from="paper" to="navy" />
       <Philosophy />
+      <SectionDivider index="04" label="The Method" from="navy" to="paper" />
       <CompassMethod />
+      <SectionDivider index="05" label="The Compass" from="paper" to="navy" />
       <MentorCompass />
+      <SectionDivider index="06" label="The Journey" from="navy" to="paper" />
       <JourneyMap />
+      <SectionDivider index="07" label="Who I Help" from="paper" to="navy" />
       <WhoIHelp />
+      <SectionDivider index="08" label="Mentoring" from="navy" to="paper" />
       <Services />
+      <SectionDivider index="09" from="paper" to="paper-dim" />
       <StudentStories />
+      <SectionDivider index="10" from="paper-dim" to="paper" />
       <Testimonials />
+      <SectionDivider index="11" label="By the Numbers" from="paper" to="navy" />
       <Achievements />
+      <SectionDivider index="12" label="Resources" from="navy" to="paper-dim" />
       <Resources />
+      <SectionDivider index="13" label="Ask Me Anything" from="paper-dim" to="accent" />
       <div id="ask">
         <AskMentor />
       </div>
+      <SectionDivider index="14" label="Your Next Step" from="accent" to="navy" />
       <FinalCTA />
+      <SectionDivider from="navy" to="paper" />
       <Footer />
       <MentorPassport />
     </main>
