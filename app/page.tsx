@@ -8,8 +8,8 @@ import { MentorCompass } from "@/components/MentorCompass";
 import { JourneyMap } from "@/components/JourneyMap";
 import { WhoIHelp } from "@/components/WhoIHelp";
 import { Services } from "@/components/Services";
-import { StudentStories } from "@/components/StudentStories";
-import { Testimonials } from "@/components/Testimonials";
+// import { StudentStories } from "@/components/StudentStories";
+// import { Testimonials } from "@/components/Testimonials";
 import { Achievements } from "@/components/Achievements";
 import { Resources } from "@/components/Resources";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -38,15 +38,19 @@ export default function Home() {
       <WhoIHelp />
       <SectionDivider index="08" label="Mentoring" from="navy" to="paper" />
       <Services />
-      <SectionDivider index="09" from="paper" to="paper-dim" />
+      {/* Student Stories & Testimonials — commented out for now, both are
+          still placeholder-only content. Re-enable once real stories and
+          testimonials are ready, and restore the "09"/"10" chapter indices
+          below (bumping the ones after back up by two). */}
+      {/* <SectionDivider index="09" from="paper" to="paper-dim" />
       <StudentStories />
       <SectionDivider index="10" from="paper-dim" to="paper" />
-      <Testimonials />
-      <SectionDivider index="11" label="By the Numbers" from="paper" to="navy" />
+      <Testimonials /> */}
+      <SectionDivider index="09" label="By the Numbers" from="paper" to="navy" />
       <Achievements />
-      <SectionDivider index="12" label="Resources" from="navy" to="paper-dim" />
+      <SectionDivider index="10" label="Resources" from="navy" to="paper-dim" />
       <Resources />
-      <SectionDivider index="13" label="Your Next Step" from="paper-dim" to="navy" />
+      <SectionDivider index="11" label="Your Next Step" from="paper-dim" to="navy" />
       <FinalCTA />
       <Footer />
       <MentorPassport />

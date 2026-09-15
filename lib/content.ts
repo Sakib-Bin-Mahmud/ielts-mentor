@@ -25,7 +25,8 @@ export const nav = [
   { label: "The Story", href: "#story" },
   { label: "Philosophy", href: "#philosophy" },
   { label: "The Method", href: "#method" },
-  { label: "Student Stories", href: "#stories" },
+  // Student Stories section is commented out for now — see app/page.tsx.
+  // { label: "Student Stories", href: "#stories" },
   { label: "Mentoring", href: "#services" },
   { label: "Resources", href: "#resources" },
 ];
@@ -330,7 +331,10 @@ export const passportMilestones = [
   { key: "story", label: "The Story", sectionId: "story" },
   { key: "philosophy", label: "The Philosophy", sectionId: "philosophy" },
   { key: "method", label: "The Method", sectionId: "method" },
-  { key: "stories", label: "Student Stories", sectionId: "stories" },
+  // Student Stories section is commented out for now — see app/page.tsx.
+  // Leaving this milestone in would make 100% unreachable (its section
+  // no longer exists to scroll past).
+  // { key: "stories", label: "Student Stories", sectionId: "stories" },
   { key: "resources", label: "Resources", sectionId: "resources" },
   { key: "next", label: "Your Next Step", sectionId: "final-cta" },
 ];
