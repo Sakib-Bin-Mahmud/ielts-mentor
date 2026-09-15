@@ -137,7 +137,7 @@ export function Hero() {
             {/* Photo frame */}
             <div className="absolute inset-0 overflow-hidden rounded-xl border border-ink/10 bg-paper-dim">
               <Image
-                src="/images/mentor-portrait.png"
+                src="/images/mentor-portrait.jpg"
                 alt={`${mentor.name}, ${mentor.role}`}
                 fill
                 priority

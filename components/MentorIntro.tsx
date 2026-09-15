@@ -10,7 +10,7 @@ export function MentorIntro() {
           <Reveal>
             <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-ink/10 bg-ink/5 md:max-w-none">
               <Image
-                src="/images/mentor-speaking.png"
+                src="/images/mentor-speaking.jpg"
                 alt={`${mentor.name} speaking during a teaching session`}
                 fill
                 sizes="(min-width: 768px) 40vw, 384px"
