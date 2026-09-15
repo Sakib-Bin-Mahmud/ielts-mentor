@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { DividerPath } from "./DividerPath";
+import { DividerSpiral } from "./DividerSpiral";
 
 type Tone = "paper" | "paper-dim" | "navy" | "accent";
 
@@ -39,28 +39,14 @@ const grainClass: Record<Tone, string> = {
 };
 
 // "light" vs "dark" grouping decides whether a boundary gets the full
-// gradient-bridge treatment (a real tonal shift) or stays a quiet line
+// spiral-bound seam treatment (a real tonal shift) or stays a quiet line
 // (paper <-> paper-dim: same family, nothing to announce).
 const isLight = (t: Tone) => t === "paper" || t === "paper-dim";
 
-// Tailwind's scanner needs full literal class strings — from-${x} to-${y}
-// interpolation would never match anything in the compiled CSS. Only the
-// cross-tone (light <-> dark) pairs are ever rendered as a real gradient.
-const gradientClass: Record<string, string> = {
-  "paper->navy": "bg-gradient-to-b from-paper to-navy",
-  "paper->accent": "bg-gradient-to-b from-paper to-clarity-teal",
-  "paper-dim->navy": "bg-gradient-to-b from-paper-dim to-navy",
-  "paper-dim->accent": "bg-gradient-to-b from-paper-dim to-clarity-teal",
-  "navy->paper": "bg-gradient-to-b from-navy to-paper",
-  "navy->paper-dim": "bg-gradient-to-b from-navy to-paper-dim",
-  "accent->paper": "bg-gradient-to-b from-clarity-teal to-paper",
-  "accent->paper-dim": "bg-gradient-to-b from-clarity-teal to-paper-dim",
-};
-
 /**
- * A chapter break between major sections — a thin "journey line" threaded
- * through a short color bridge, so adjacent sections read as one continuous
- * scroll rather than stacked, unrelated blocks. `label` is optional: the
+ * A chapter break between major sections — a spiral-notebook seam binding
+ * the two tones together, so adjacent sections read as pages in the same
+ * journal rather than stacked, unrelated blocks. `label` is optional: the
  * closing transition into the footer omits it for a quieter finish.
  */
 export function SectionDivider({
@@ -114,12 +100,12 @@ export function SectionDivider({
         <div className={`mx-auto h-8 w-px ${lineClass[from]}`} aria-hidden />
       </div>
 
-      {/* Short gradient bridge — the literal "navy -> paper" color transition,
-          with the connected-path thread from the Journey Map crossing it */}
-      <div
-        className={`relative h-14 w-full sm:h-20 ${gradientClass[`${from}->${to}`] ?? bgClass[to]}`}
-      >
-        <DividerPath />
+      {/* Spiral-bound seam — a coil of rings straddling the exact
+          "navy -> paper" boundary, like two notebook pages bound together */}
+      <div className="relative h-12 w-full sm:h-16">
+        <div className={`absolute inset-x-0 top-0 h-1/2 ${bgClass[from]}`} />
+        <div className={`absolute inset-x-0 bottom-0 h-1/2 ${bgClass[to]}`} />
+        <DividerSpiral />
       </div>
     </div>
   );
