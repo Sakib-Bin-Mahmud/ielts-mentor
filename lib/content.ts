@@ -378,14 +378,13 @@ export const finalCta = {
 
 export const footer = {
   statement: "IELTS mentoring with clarity, strategy, and purpose.",
-  // PLACEHOLDER — add real contact channels before publishing.
   contact: {
-    email: "[your-email@example.com]",
-    whatsapp: "[+8xx-xxxx-xxxxx]",
+    email: "sakibmahmud.pepilika@gmail.com",
+    phone: "01748609302",
   },
   social: [
-    { label: "LinkedIn", href: "#", placeholder: true },
-    { label: "Instagram", href: "#", placeholder: true },
-    { label: "Facebook", href: "#", placeholder: true },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sakib-bin-mahmud/" },
+    { label: "Instagram", href: "https://www.instagram.com/sakib.bin.mahmud" },
+    { label: "Facebook", href: "https://www.facebook.com/sakibmahmud.pepilika/" },
   ],
 };

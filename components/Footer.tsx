@@ -1,5 +1,4 @@
 import { footer, mentor, nav } from "@/lib/content";
-import { Placeholder } from "./Placeholder";
 
 export function Footer() {
   return (
@@ -29,17 +28,25 @@ export function Footer() {
 
         <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-paper/60">
           {footer.social.map((s) => (
-            <Placeholder key={s.label} label={`Add real ${s.label} link`}>
-              <a href={s.href} className="transition-colors hover:text-paper">
-                {s.label}
-              </a>
-            </Placeholder>
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-paper"
+            >
+              {s.label}
+            </a>
           ))}
         </div>
 
         <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-paper/60">
-          <Placeholder label="Add your real email">{footer.contact.email}</Placeholder>
-          <Placeholder label="Add your real WhatsApp">{footer.contact.whatsapp}</Placeholder>
+          <a href={`mailto:${footer.contact.email}`} className="transition-colors hover:text-paper">
+            {footer.contact.email}
+          </a>
+          <a href="tel:+8801748609302" className="transition-colors hover:text-paper">
+            {footer.contact.phone}
+          </a>
         </div>
 
         <p className="mx-auto mt-14 max-w-xs border-t border-paper/10 pt-6 text-xs text-paper/40">
