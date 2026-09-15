@@ -45,7 +45,11 @@ const config: Config = {
           "ui-serif",
           "serif",
         ],
+        // Paragraph/body font. Siyam Rupali first, with Inter right behind
+        // it as a per-glyph fallback (it doesn't cover every symbol the
+        // site uses — arrows, checkmarks, the ✦ mark, etc.).
         sans: [
+          "var(--font-siyam-rupali)",
           "var(--font-inter)",
           "-apple-system",
           "BlinkMacSystemFont",

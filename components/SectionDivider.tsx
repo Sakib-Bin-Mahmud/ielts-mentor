@@ -101,15 +101,8 @@ export function SectionDivider({
         <div className={`pointer-events-none absolute inset-0 ${grainClass[from]} opacity-[0.4]`} />
         {label && (
           <Reveal className="relative mx-auto max-w-content px-5 py-10 text-center sm:px-8 sm:py-14">
-            {index && (
-              <p
-                className={`text-[10px] font-semibold uppercase tracking-[0.3em] ${mutedTextClass[from]}`}
-              >
-                Chapter {index}
-              </p>
-            )}
             <p
-              className={`mt-2 font-display text-2xl italic leading-none sm:text-3xl ${textClass[from]}`}
+              className={`font-display text-2xl italic leading-none sm:text-3xl ${textClass[from]}`}
             >
               {label}
             </p>

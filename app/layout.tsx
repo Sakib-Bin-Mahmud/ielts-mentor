@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, DM_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { mentor } from "@/lib/content";
 import { MotionProvider } from "@/components/MotionProvider";
@@ -19,6 +20,13 @@ const dmMono = DM_Mono({
   subsets: ["latin"],
   variable: "--font-dm-mono",
   weight: ["400", "500"],
+});
+// Paragraph/body font. Self-hosted (not on Google Fonts) — see
+// app/fonts/LICENSE-SiyamRupali.txt for its GPL-3.0 license.
+const siyamRupali = localFont({
+  src: "./fonts/SiyamRupali.ttf",
+  variable: "--font-siyam-rupali",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${inter.variable} ${dmMono.variable}`}
+      className={`${playfairDisplay.variable} ${inter.variable} ${dmMono.variable} ${siyamRupali.variable}`}
     >
       <body className="font-sans antialiased bg-paper text-ink">
         <MotionProvider>{children}</MotionProvider>
