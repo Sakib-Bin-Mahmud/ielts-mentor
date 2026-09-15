@@ -47,21 +47,28 @@ export function Services() {
                         {s.short}
                       </p>
 
-                      <AnimatePresence initial={false}>
-                        {isHovered && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                            className="max-w-md overflow-hidden"
-                          >
-                            <p className="mt-3 text-sm leading-relaxed text-ink-soft/60">
-                              {s.detail}
-                            </p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {/* Always visible on touch devices — hover can't reveal it there */}
+                      <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-soft/60 sm:hidden">
+                        {s.detail}
+                      </p>
+
+                      <div className="hidden sm:block">
+                        <AnimatePresence initial={false}>
+                          {isHovered && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                              className="max-w-md overflow-hidden"
+                            >
+                              <p className="mt-3 text-sm leading-relaxed text-ink-soft/60">
+                                {s.detail}
+                              </p>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     </div>
                   </div>
 

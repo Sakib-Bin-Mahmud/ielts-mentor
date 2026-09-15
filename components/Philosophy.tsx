@@ -94,7 +94,7 @@ export function Philosophy() {
           </h2>
         </Reveal>
 
-        <div className="mt-20 flex flex-col gap-20 sm:mt-28 sm:gap-28">
+        <div className="mt-14 flex flex-col gap-14 sm:mt-28 sm:gap-28">
           {philosophyPrinciples.map((p, i) => (
             <PrincipleRow
               key={p.key}

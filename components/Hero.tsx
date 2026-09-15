@@ -17,9 +17,9 @@ export function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.35]" />
 
-      <div className="relative mx-auto grid w-full max-w-content items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="relative mx-auto grid w-full max-w-content items-center gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         {/* LEFT — statement */}
-        <div>
+        <div className="order-2 lg:order-none">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-balance font-display text-4xl font-semibold leading-[1.05] text-ink sm:text-5xl lg:text-[3.4rem]"
+            className="text-balance font-display text-[2.15rem] font-semibold leading-[1.1] text-ink sm:text-4xl sm:leading-[1.05] md:text-5xl lg:text-[3.4rem]"
           >
             {hero.title}
             <br />
@@ -44,7 +44,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 max-w-md text-lg text-ink-soft/80"
+            className="mt-5 max-w-md text-base text-ink-soft/80 sm:mt-6 sm:text-lg"
           >
             {hero.subtitle}
           </motion.p>
@@ -53,17 +53,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-9 flex flex-wrap gap-4"
+            className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <a
               href="#final-cta"
-              className="rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-clarity-teal hover:shadow-md"
+              className="w-full rounded-full bg-navy px-8 py-3.5 text-center text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-clarity-teal hover:shadow-md sm:w-auto"
             >
               {hero.primaryCta}
             </a>
             <a
               href="#story"
-              className="rounded-full border border-ink/20 px-8 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-navy hover:bg-navy hover:text-paper"
+              className="w-full rounded-full border border-ink/20 px-8 py-3.5 text-center text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-navy hover:bg-navy hover:text-paper sm:w-auto"
             >
               {hero.secondaryCta}
             </a>

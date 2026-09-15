@@ -74,7 +74,7 @@ export function Navbar() {
               aria-label="Open menu"
               aria-expanded={open}
               onClick={() => setOpen(true)}
-              className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 transition-opacity hover:opacity-70 xl:hidden"
+              className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 transition-opacity hover:opacity-70 xl:hidden"
             >
               <span className="h-0.5 w-6 bg-ink" />
               <span className="h-0.5 w-6 bg-ink" />
@@ -117,7 +117,7 @@ export function Navbar() {
                 <button
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
-                  className="flex h-9 w-9 items-center justify-center text-xl text-ink transition-opacity hover:opacity-70"
+                  className="-mr-2 flex h-11 w-11 items-center justify-center text-xl text-ink transition-opacity hover:opacity-70"
                 >
                   ✕
                 </button>

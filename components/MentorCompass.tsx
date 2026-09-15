@@ -145,7 +145,7 @@ export function MentorCompass() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.15} className="mx-auto mt-10 max-w-xl text-center">
+        <Reveal delay={0.15} className="mx-auto mt-10 hidden max-w-xl text-center sm:block">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.key}
@@ -165,25 +165,63 @@ export function MentorCompass() {
           </AnimatePresence>
         </Reveal>
 
-        {/* Mobile: stacked, touch-friendly */}
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:hidden">
-          {compassDirections.map((d) => {
-            const isActive = active === d.key;
-            return (
-              <button
-                key={d.key}
-                onClick={() => setActive(d.key)}
-                className={`rounded-xl border p-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${
-                  isActive ? "border-clarity-teal bg-clarity-teal/10" : "border-paper/15"
-                }`}
+        {/* Mobile: a compact rotating mark + a 2x2 direction selector, one insight panel */}
+        <div className="mt-10 sm:hidden">
+          <div className="flex justify-center">
+            <motion.div
+              animate={{ rotate: angleFor[activePosition] }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="relative flex h-16 w-16 items-center justify-center rounded-full border border-compass-gold/50 bg-clarity-teal shadow-md"
+            >
+              <span
+                className="font-display text-sm italic text-paper"
+                style={{ transform: `rotate(${-angleFor[activePosition]}deg)` }}
               >
-                <p className="text-xs font-semibold uppercase tracking-wider text-clarity-light">
+                You
+              </span>
+              <span
+                aria-hidden
+                className="absolute left-1/2 top-0 h-1.5 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-compass-gold"
+              />
+            </motion.div>
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-2">
+            {compassDirections.map((d) => {
+              const isActive = active === d.key;
+              return (
+                <button
+                  key={d.key}
+                  onClick={() => setActive(d.key)}
+                  className={`min-h-[44px] rounded-lg border px-3 py-3 text-center text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300 ${
+                    isActive
+                      ? "border-clarity-teal bg-clarity-teal/10 text-paper"
+                      : "border-paper/15 text-paper/50"
+                  }`}
+                >
                   {d.label}
-                </p>
-                <p className="mt-1 text-sm italic text-paper/70">“{d.insight}”</p>
-              </button>
-            );
-          })}
+                </button>
+              );
+            })}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.key}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25 }}
+              className="mt-4 rounded-xl border border-paper/15 bg-navy-soft p-6"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wider text-clarity-light">
+                {current.label}
+              </p>
+              <p className="mt-3 font-display text-xl italic leading-snug text-paper">
+                “{current.insight}”
+              </p>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>

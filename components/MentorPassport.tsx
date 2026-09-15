@@ -62,7 +62,10 @@ export function MentorPassport() {
 
   return (
     <div className="fixed bottom-5 right-5 z-30 sm:bottom-8 sm:right-8">
-      {/* Unlock cue — quiet, no "unlocked" language, no confetti */}
+      {/* Unlock cue — quiet, no "unlocked" language, no confetti.
+          Text toast only on larger screens: on mobile it can land on top of
+          whatever section is underneath, so the badge's own pulse (below)
+          carries the cue instead. */}
       <AnimatePresence>
         {justUnlocked && (
           <motion.div
@@ -70,7 +73,7 @@ export function MentorPassport() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="absolute bottom-14 right-0 flex items-center gap-2 whitespace-nowrap rounded-lg border border-compass-gold/25 bg-navy px-4 py-2 text-xs font-medium text-paper shadow-md"
+            className="absolute bottom-14 right-0 hidden items-center gap-2 whitespace-nowrap rounded-lg border border-compass-gold/25 bg-navy px-4 py-2 text-xs font-medium text-paper shadow-md sm:flex"
           >
             <span className="text-compass-gold">✓</span>
             {passportMilestones.find((m) => m.key === justUnlocked)?.label}
@@ -87,7 +90,7 @@ export function MentorPassport() {
           whileHover={{ scale: 1.05 }}
           animate={justUnlocked ? { scale: [1, 1.18, 1] } : { scale: 1 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className={`flex h-12 w-12 items-center justify-center rounded-full bg-navy text-paper shadow-md transition-shadow duration-300 ${
+          className={`flex h-11 w-11 items-center justify-center rounded-full bg-navy text-paper shadow-md transition-shadow duration-300 sm:h-12 sm:w-12 ${
             count > 0 ? "ring-1 ring-compass-gold/50 ring-offset-2 ring-offset-paper" : ""
           }`}
         >
@@ -103,7 +106,7 @@ export function MentorPassport() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 8 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-14 right-0 w-72 rounded-xl border border-ink/10 bg-paper p-5 shadow-xl"
+              className="absolute bottom-14 right-0 w-[min(18rem,calc(100vw-2.5rem))] rounded-xl border border-ink/10 bg-paper p-5 shadow-xl"
             >
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
                 Mentor Passport
