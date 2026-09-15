@@ -87,7 +87,7 @@ export function Philosophy() {
       <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <Reveal>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-clarity-light">
-            My IELTS Philosophy
+            My Beliefs
           </p>
           <h2 className="max-w-2xl text-balance font-display text-3xl font-medium leading-tight sm:text-4xl md:text-[2.75rem]">
             {philosophyIntro}

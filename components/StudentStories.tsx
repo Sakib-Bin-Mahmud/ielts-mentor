@@ -103,7 +103,7 @@ export function StudentStories() {
     <section id="stories" className="scroll-mt-20 bg-paper-dim py-20 sm:py-28">
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Student Stories"
+          eyebrow="Success Stories"
           title="It's about transformation, not just a number."
           subtitle="Real journeys will replace these placeholders as soon as they're ready to share."
         />

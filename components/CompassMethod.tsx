@@ -7,7 +7,7 @@ export function CompassMethod() {
     <section id="method" className="scroll-mt-20 bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading
-          eyebrow="The Mentoring Method"
+          eyebrow="My Approach"
           title={compassMethod.name}
           subtitle="A repeatable framework — adapted to each student, never applied as a rigid template."
         />

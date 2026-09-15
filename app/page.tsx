@@ -26,9 +26,9 @@ export default function Home() {
       <MentorIntro />
       <SectionDivider index="02" from="paper-dim" to="paper" />
       <StoryTimeline />
-      <SectionDivider index="03" label="The Philosophy" from="paper" to="navy" />
+      <SectionDivider index="03" label="My Beliefs" from="paper" to="navy" />
       <Philosophy />
-      <SectionDivider index="04" label="The Method" from="navy" to="paper" />
+      <SectionDivider index="04" label="My Approach" from="navy" to="paper" />
       <CompassMethod />
       <SectionDivider index="05" label="The Compass" from="paper" to="navy" />
       <MentorCompass />
@@ -38,7 +38,7 @@ export default function Home() {
       <WhoIHelp />
       <SectionDivider index="08" label="Mentoring" from="navy" to="paper" />
       <Services />
-      {/* Student Stories & Testimonials — commented out for now, both are
+      {/* Success Stories & Testimonials — commented out for now, both are
           still placeholder-only content. Re-enable once real stories and
           testimonials are ready, and restore the "09"/"10" chapter indices
           below (bumping the ones after back up by two). */}
@@ -52,7 +52,7 @@ export default function Home() {
           ones after back up by one). */}
       {/* <SectionDivider index="09" label="By the Numbers" from="paper" to="navy" />
       <Achievements /> */}
-      <SectionDivider index="09" label="Resources" from="paper" to="paper-dim" />
+      <SectionDivider index="09" label="Resources & Insights" from="paper" to="paper-dim" />
       <Resources />
       <SectionDivider index="10" label="Your Next Step" from="paper-dim" to="navy" />
       <FinalCTA />

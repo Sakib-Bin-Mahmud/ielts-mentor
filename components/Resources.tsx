@@ -8,7 +8,7 @@ export function Resources() {
     <section id="resources" className="scroll-mt-20 bg-paper-dim py-20 sm:py-28">
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Resources & Mentor Notes"
+          eyebrow="Resources & Insights"
           title="Writing worth reading, not a course catalog"
         />
 

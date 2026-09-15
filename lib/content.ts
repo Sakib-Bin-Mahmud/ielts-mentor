@@ -22,13 +22,13 @@ export const mentor = {
 };
 
 export const nav = [
-  { label: "The Story", href: "#story" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "The Method", href: "#method" },
-  // Student Stories section is commented out for now — see app/page.tsx.
-  // { label: "Student Stories", href: "#stories" },
+  { label: "About / My Story", href: "#story" },
+  { label: "My Beliefs", href: "#philosophy" },
+  { label: "My Approach", href: "#method" },
+  // Success Stories section is commented out for now — see app/page.tsx.
+  // { label: "Success Stories", href: "#stories" },
   { label: "Mentoring", href: "#services" },
-  { label: "Resources", href: "#resources" },
+  { label: "Resources & Insights", href: "#resources" },
 ];
 
 export const hero = {
@@ -328,14 +328,14 @@ export const achievements = [
 ];
 
 export const passportMilestones = [
-  { key: "story", label: "The Story", sectionId: "story" },
-  { key: "philosophy", label: "The Philosophy", sectionId: "philosophy" },
-  { key: "method", label: "The Method", sectionId: "method" },
-  // Student Stories section is commented out for now — see app/page.tsx.
+  { key: "story", label: "My Story", sectionId: "story" },
+  { key: "philosophy", label: "My Beliefs", sectionId: "philosophy" },
+  { key: "method", label: "My Approach", sectionId: "method" },
+  // Success Stories section is commented out for now — see app/page.tsx.
   // Leaving this milestone in would make 100% unreachable (its section
   // no longer exists to scroll past).
-  // { key: "stories", label: "Student Stories", sectionId: "stories" },
-  { key: "resources", label: "Resources", sectionId: "resources" },
+  // { key: "stories", label: "Success Stories", sectionId: "stories" },
+  { key: "resources", label: "Resources & Insights", sectionId: "resources" },
   { key: "next", label: "Your Next Step", sectionId: "final-cta" },
 ];
 
