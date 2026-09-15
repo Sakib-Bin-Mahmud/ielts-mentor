@@ -22,16 +22,17 @@ export const mentor = {
 };
 
 export const nav = [
-  { label: "The Story", href: "#story" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "The Method", href: "#method" },
-  { label: "Student Stories", href: "#stories" },
+  { label: "About", href: "#story" },
+  { label: "My Beliefs", href: "#philosophy" },
+  { label: "My Approach", href: "#method" },
+  // Success Stories section is commented out for now — see app/page.tsx.
+  // { label: "Success Stories", href: "#stories" },
   { label: "Mentoring", href: "#services" },
-  { label: "Resources", href: "#resources" },
+  { label: "Resources & Insights", href: "#resources" },
 ];
 
 export const hero = {
-  eyebrow: "Your IELTS Journey Starts Here",
+  eyebrow: "IELTS Mentor",
   title: "IELTS is not just a test.",
   titleAccent: "It's a journey. Let's navigate it together.",
   subtitle:
@@ -40,19 +41,11 @@ export const hero = {
   secondaryCta: "Meet Your Mentor",
 };
 
+// Drives the hero's compact "current → goal" band-score element.
 export const scoreScale = {
-  label: "YOUR GOAL",
-  min: 6.0,
-  max: 8.0,
-  startDefault: 6.0,
-  goalDefault: 7.5,
-  messages: [
-    { at: 6.0, text: "You have a foundation. Now you need direction." },
-    { at: 6.5, text: "You're closer than you think." },
-    { at: 7.0, text: "Strategy starts making a bigger difference." },
-    { at: 7.5, text: "Precision matters." },
-    { at: 8.0, text: "This is where clarity becomes mastery." },
-  ],
+  label: "Target Band",
+  current: 6.0,
+  goal: 7.5,
 };
 
 export const mentorIntro = {
@@ -132,13 +125,6 @@ export const philosophyPrinciples = [
       "Doing ten more practice tests without feedback just repeats the same mistakes ten more times. Targeted feedback is what actually moves the score.",
   },
   {
-    key: "consistency",
-    title: "Consistency over intensity",
-    short: "Sustainable preparation beats random bursts of effort.",
-    detail:
-      "A calm, steady routine over a few weeks beats a frantic cramming sprint the night before — and it's far easier on your confidence.",
-  },
-  {
     key: "individuality",
     title: "Individuality over templates",
     short: "Your preparation should reflect your actual weaknesses and goals.",
@@ -210,35 +196,35 @@ export const bandLanguage = [
 export const personas = [
   {
     key: "applicant",
-    icon: "🎓",
     title: "The University Applicant",
     quote: "I need the score for my next academic chapter.",
     message:
       "University deadlines don't move. We'll build a plan around your timeline, not an open-ended one.",
+    cta: "Plan your application timeline",
   },
   {
     key: "professional",
-    icon: "🌍",
     title: "The Future Global Professional",
     quote: "IELTS is part of a bigger career plan.",
     message:
       "For you, IELTS is one milestone among several. We'll treat it that way — efficient, not all-consuming.",
+    cta: "Talk about your career plan",
   },
   {
     key: "band7",
-    icon: "🚀",
     title: "The Band 7+ Candidate",
-    quote: "I'm close — but I need to break through.",
+    quote: "I'm close — but I can't break through.",
     message:
-      "The last half-band is rarely about more English. It's about precision. That's exactly where mentoring earns its place.",
+      "At this stage, doing more isn't always the answer. Understanding exactly where your marks are being lost becomes more important.",
+    cta: "Find out where you're losing marks",
   },
   {
     key: "beginner",
-    icon: "🧭",
     title: "The Confused Beginner",
     quote: "I don't know where to start.",
     message:
       "That's normal, and it's fixable. The first session is just about building a clear starting map.",
+    cta: "Get your starting map",
   },
 ];
 
@@ -246,27 +232,30 @@ export const services = [
   {
     key: "core",
     title: "1:1 IELTS Mentoring",
-    text: "Personalized guidance throughout your entire IELTS journey — not a fixed syllabus, a plan built around you.",
+    short: "Personalized guidance around the candidate's goals.",
+    detail:
+      "Not a fixed syllabus — a plan built around your timeline, your target band, and the sections that actually need work.",
   },
   {
     key: "writing",
     title: "Writing Mentoring",
-    text: "Focused guidance for candidates struggling with Writing Task 1 and Task 2 — structure, coherence, and precision.",
+    short: "Focused guidance for IELTS Writing.",
+    detail:
+      "Task 1 and Task 2 — structure, coherence, and the precision that separates a 6 from a 7.5.",
   },
   {
     key: "speaking",
     title: "Speaking Mentoring",
-    text: "Individual feedback and confidence-building for the Speaking test, built around how you actually talk.",
+    short: "Individual feedback and confidence building.",
+    detail:
+      "Built around how you actually talk, not a rehearsed script — so it holds up under real exam pressure.",
   },
   {
     key: "strategy",
-    title: "IELTS Strategy Session",
-    text: "A focused, one-time conversation about your goals, challenges, and preparation direction.",
-  },
-  {
-    key: "flexible",
-    title: "Personalized Guidance",
-    text: "Flexible mentoring shaped around your situation, timeline, and target band.",
+    title: "Strategy Session",
+    short: "A focused conversation around direction and preparation.",
+    detail:
+      "One conversation to map your goals, challenges, and the most efficient path from where you are to your target band.",
   },
 ];
 
@@ -274,28 +263,34 @@ export const services = [
 export const studentStories = [
   {
     key: "story-1",
-    before: "“I didn't know why my Writing score wasn't improving.”",
+    startScore: "6.0",
+    startDetail: "Writing 5.5",
+    challenge: "“I didn't know why my Writing score wasn't improving.”",
     turningPoint: "“We changed how I approached feedback.”",
-    afterScore: "7.5 Overall",
-    afterDetail: "Writing 7.0",
+    resultScore: "7.5",
+    resultDetail: "Writing 7.0",
     name: "[Student first name]",
     placeholder: true,
   },
   {
     key: "story-2",
-    before: "“I'd taken the test twice and stalled at the same score.”",
+    startScore: "[Score]",
+    startDetail: "[Detail]",
+    challenge: "“I'd taken the test twice and stalled at the same score.”",
     turningPoint: "“We found the one pattern that was capping me.”",
-    afterScore: "[Band score]",
-    afterDetail: "[Section detail]",
+    resultScore: "[Score]",
+    resultDetail: "[Detail]",
     name: "[Student first name]",
     placeholder: true,
   },
   {
     key: "story-3",
-    before: "“Speaking was the section I dreaded most.”",
+    startScore: "[Score]",
+    startDetail: "[Detail]",
+    challenge: "“Speaking was the section I dreaded most.”",
     turningPoint: "“Practice with actual feedback, not just repetition.”",
-    afterScore: "[Band score]",
-    afterDetail: "[Section detail]",
+    resultScore: "[Score]",
+    resultDetail: "[Detail]",
     name: "[Student first name]",
     placeholder: true,
   },
@@ -333,68 +328,37 @@ export const achievements = [
 ];
 
 export const passportMilestones = [
-  { key: "story", label: "The Story", sectionId: "story" },
-  { key: "philosophy", label: "The Philosophy", sectionId: "philosophy" },
-  { key: "method", label: "The Method", sectionId: "method" },
-  { key: "stories", label: "Student Stories", sectionId: "stories" },
+  { key: "story", label: "My Story", sectionId: "story" },
+  { key: "philosophy", label: "My Beliefs", sectionId: "philosophy" },
+  { key: "method", label: "My Approach", sectionId: "method" },
+  // Success Stories section is commented out for now — see app/page.tsx.
+  // Leaving this milestone in would make 100% unreachable (its section
+  // no longer exists to scroll past).
+  // { key: "stories", label: "Success Stories", sectionId: "stories" },
+  { key: "resources", label: "Resources & Insights", sectionId: "resources" },
   { key: "next", label: "Your Next Step", sectionId: "final-cta" },
 ];
 
-// PLACEHOLDER — replace with real article topics/links once written.
-export const resources = [
-  {
-    category: "Writing",
-    title: "Why your IELTS Writing score may be stuck",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Strategy",
-    title: "The problem with memorizing IELTS templates",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Insights",
-    title: "What Band 7 actually requires",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Mentor Notes",
-    title: "How to prepare for IELTS without burning out",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-];
-
-export const askMentor = {
-  title: "Got an IELTS question?",
-  lines: [
-    "Maybe you've been stuck at the same score.",
-    "Maybe you're unsure where to start.",
-    "Maybe you simply need a second opinion.",
-  ],
-  cta: "Ask Me",
-};
+// Resource article teasers now live in lib/articles.ts (full articles,
+// rendered at /resources/[slug]) — Resources.tsx reads from there directly.
 
 export const finalCta = {
-  title: "Your IELTS goal is part of a bigger story.",
+  title: "Your IELTS goal is part of",
+  titleAccent: "a bigger story.",
   subtitle: "Let's make sure you know where you're going — and how to get there.",
-  primary: "Start Your IELTS Journey",
+  primary: "Start Your Journey",
   secondary: "Talk to Me",
 };
 
 export const footer = {
   statement: "IELTS mentoring with clarity, strategy, and purpose.",
-  // PLACEHOLDER — add real contact channels before publishing.
   contact: {
-    email: "[your-email@example.com]",
-    whatsapp: "[+8xx-xxxx-xxxxx]",
+    email: "sakibmahmud.pepilika@gmail.com",
+    phone: "01748609302",
   },
   social: [
-    { label: "LinkedIn", href: "#", placeholder: true },
-    { label: "Instagram", href: "#", placeholder: true },
-    { label: "Facebook", href: "#", placeholder: true },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sakib-bin-mahmud/" },
+    { label: "Instagram", href: "https://www.instagram.com/sakib.bin.mahmud" },
+    { label: "Facebook", href: "https://www.facebook.com/sakibmahmud.pepilika/" },
   ],
 };

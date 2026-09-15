@@ -1,36 +1,40 @@
+import Image from "next/image";
 import { mentorIntro, mentor } from "@/lib/content";
 import { Reveal } from "./Reveal";
-import { Placeholder } from "./Placeholder";
 
 export function MentorIntro() {
   return (
     <section className="relative bg-paper-dim py-20 sm:py-28">
       <div className="mx-auto max-w-content px-5 sm:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr]">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-ink/5">
-              <Placeholder
-                className="absolute inset-4 flex items-center justify-center rounded-2xl border-2 border-dashed border-ink/15 bg-white/40 text-center"
-                label="Add your portrait photo"
-              >
-                <span className="px-6 text-sm text-ink-soft/60">
-                  [ Portrait photo ]
-                </span>
-              </Placeholder>
-              <div className="absolute -bottom-4 -right-4 rounded-2xl bg-ink px-5 py-4 text-paper shadow-lg">
-                <p className="font-mono text-2xl font-semibold leading-none">
-                  {mentor.credentials[0].value.split(" ")[0]}
-                </p>
-                <p className="mt-1 text-[10px] uppercase tracking-wider text-paper/70">
-                  {mentor.credentials[0].label}
-                </p>
-              </div>
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-ink/10 bg-ink/5 md:max-w-none">
+              <Image
+                src="/images/mentor-speaking.jpg"
+                alt={`${mentor.name} speaking during a teaching session`}
+                fill
+                sizes="(min-width: 768px) 40vw, 384px"
+                className="object-cover"
+                style={{ objectPosition: "38% 30%" }}
+              />
+              {/* Subtle film-grain texture, matches the hero portrait's treatment */}
+              <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.15]" />
+            </div>
+
+            {/* Credential stat, adjacent to (not overlapping) the photo */}
+            <div className="mx-auto mt-4 flex max-w-sm items-baseline gap-2 md:max-w-none">
+              <p className="font-mono text-lg font-semibold text-compass-gold">
+                {mentor.credentials[0].value.split(" ")[0]}
+              </p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                {mentor.credentials[0].label}
+              </p>
             </div>
           </Reveal>
 
           <div>
             <Reveal>
-              <h2 className="font-display text-3xl text-ink sm:text-4xl">
+              <h2 className="font-display text-3xl font-medium text-ink sm:text-4xl">
                 {mentorIntro.headline}
               </h2>
               <p className="mt-4 max-w-lg font-display text-xl italic text-clarity-teal">
@@ -52,6 +56,21 @@ export function MentorIntro() {
                 <br />
                 {mentorIntro.belief[1]}
               </p>
+            </Reveal>
+
+            <Reveal delay={0.25} className="mt-8 flex gap-8 border-t border-ink/10 pt-6">
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                  Role
+                </p>
+                <p className="mt-1 text-sm text-ink">{mentor.role}</p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                  Based In
+                </p>
+                <p className="mt-1 text-sm text-ink">{mentor.location}</p>
+              </div>
             </Reveal>
 
             <Reveal delay={0.3} className="mt-8">

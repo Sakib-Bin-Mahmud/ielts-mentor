@@ -9,10 +9,10 @@ export function Testimonials() {
       <div className="mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading eyebrow="What Students Say" title="In their own words" />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {testimonials.map((t, i) => (
             <Reveal key={i} delay={Math.min(i * 0.08, 0.3)}>
-              <figure className="flex h-full flex-col rounded-2xl border border-ink/10 bg-paper-dim p-6">
+              <figure className="flex h-full flex-col rounded-xl border border-ink/10 bg-paper-dim p-7">
                 <span className="font-display text-4xl leading-none text-compass-gold">
                   “
                 </span>

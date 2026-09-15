@@ -1,75 +1,57 @@
 import { footer, mentor, nav } from "@/lib/content";
-import { Placeholder } from "./Placeholder";
 
 export function Footer() {
   return (
-    <footer className="bg-paper border-t border-ink/10 py-14">
-      <div className="mx-auto max-w-content px-5 sm:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
-          <div>
-            <p className="font-display text-lg font-semibold text-ink">
-              {mentor.name}
-            </p>
-            <p className="mt-2 max-w-xs text-sm text-ink-soft/70">
-              {footer.statement}
-            </p>
-          </div>
+    <footer className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-noise-dark opacity-[0.5]" />
 
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft/50">
-              Navigate
-            </p>
-            <ul className="mt-3 space-y-2">
-              {nav.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-ink-soft/75 hover:text-ink"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="relative mx-auto max-w-content px-5 text-center sm:px-8">
+        <p className="font-display text-2xl font-medium uppercase tracking-tight sm:text-3xl">
+          {mentor.name}
+        </p>
+        <p className="mt-3 text-sm text-paper/60">{footer.statement}</p>
 
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft/50">
-              Contact
-            </p>
-            <p className="mt-3 text-sm text-ink-soft/75">
-              <Placeholder label="Add your real email">{footer.contact.email}</Placeholder>
-            </p>
-            <p className="mt-1 text-sm text-ink-soft/75">
-              <Placeholder label="Add your real WhatsApp">
-                {footer.contact.whatsapp}
-              </Placeholder>
-            </p>
-            <div className="mt-4 flex gap-4">
-              {footer.social.map((s) => (
-                <Placeholder key={s.label} label={`Add real ${s.label} link`}>
-                  <a href={s.href} className="text-sm text-ink-soft/75 hover:text-ink">
-                    {s.label}
-                  </a>
-                </Placeholder>
-              ))}
-            </div>
-          </div>
+        <p className="mx-auto mt-10 max-w-sm font-display text-xl italic leading-snug text-clarity-light sm:text-2xl">
+          Your next chapter starts with direction.
+        </p>
+
+        <nav
+          aria-label="Footer navigation"
+          className="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-paper/60"
+        >
+          {nav.map((item) => (
+            <a key={item.href} href={item.href} className="transition-colors hover:text-paper">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-paper/60">
+          {footer.social.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-paper"
+            >
+              {s.label}
+            </a>
+          ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink/10 pt-6 text-xs text-ink-soft/50 sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} {mentor.name}. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-ink">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-ink">
-              Terms
-            </a>
-          </div>
+        <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-paper/60">
+          <a href={`mailto:${footer.contact.email}`} className="transition-colors hover:text-paper">
+            {footer.contact.email}
+          </a>
+          <a href="tel:+8801748609302" className="transition-colors hover:text-paper">
+            {footer.contact.phone}
+          </a>
         </div>
+
+        <p className="mx-auto mt-14 max-w-xs border-t border-paper/10 pt-6 text-xs text-paper/40">
+          © {new Date().getFullYear()} {mentor.name}. All rights reserved.
+        </p>
       </div>
     </footer>
   );

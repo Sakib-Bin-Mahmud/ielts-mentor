@@ -75,15 +75,26 @@ lib/
 
 ## Design notes
 
-- **Palette**: "Midnight Mentor" — warm paper (#F7F5F0) background, midnight
-  navy ink (#0B132B) for contrast sections and text, cobalt blue (#2563EB)
-  as the primary interactive accent with sky blue (#7CC7FF) as its lighter
-  highlight, and warm gold (#F2C94C) reserved for achievement/milestone
-  moments (band scores, unlocked badges). Defined in `tailwind.config.ts`.
-- **Fonts**: the build ships with a polished system-font fallback stack
-  (no external network call required to build or run it). If you want the
-  originally-designed editorial serif (Fraunces) + humanist sans (Inter),
-  see "Fonts" below.
+- **Palette**: "Midnight Mentor" — glossy white (#FFFFFF) background, midnight
+  navy (#0B132B) for full-bleed dark sections and dark surfaces/badges, a
+  separate near-black ink (#111827) for all text so type never doubles as a
+  tinted surface, muted teal (#1F7A8C) as the accent for every interactive/
+  selection state (buttons, active tabs, eyebrows) with a lighter teal
+  (#6FB8C4) as its lighter highlight, and terracotta (#C1622D) reserved for
+  achievement/milestone moments (band scores, unlocked badges, stats). Defined in
+  `tailwind.config.ts` as the `navy`, `ink`, `paper`, `clarity`, and
+  `compass` color tokens.
+- **Fonts**: Playfair Display (hero headlines, section headings, editorial
+  statements, large quotes), Inter (body copy, navigation, buttons, cards),
+  and DM Mono (small numerical/gamified elements only — band scores,
+  milestones, journey indicators). Loaded via `next/font/google`; see
+  "Fonts" below.
+- **Surfaces**: cards are solid (`bg-white`/`bg-paper`/`bg-paper-dim` or, on
+  dark sections, a transparent border that fills with `navy-soft` on
+  hover/active) — no translucent glass panels or backdrop blur anywhere.
+  Card radius is capped at `rounded-xl`; only pills and circular controls use
+  `rounded-full`. Decorative texture comes from a subtle grain overlay
+  (`.bg-noise` / `.bg-noise-dark`) rather than blurred gradient glows.
 - **Gamification**: kept light and entirely optional, per the spec — a
   floating "Mentor Passport" (bottom-right) unlocks milestones as the visitor
   scrolls through the narrative sections. It never blocks content.
