@@ -339,34 +339,8 @@ export const passportMilestones = [
   { key: "next", label: "Your Next Step", sectionId: "final-cta" },
 ];
 
-// PLACEHOLDER — replace with real article topics/links once written.
-export const resources = [
-  {
-    category: "Writing",
-    title: "Why your IELTS Writing score may be stuck",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Strategy",
-    title: "The problem with memorizing IELTS templates",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Insights",
-    title: "What Band 7 actually requires",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-  {
-    category: "Mentor Notes",
-    title: "How to prepare for IELTS without burning out",
-    excerpt: "[Add a short excerpt once this article is written.]",
-    placeholder: true,
-  },
-];
-
+// Resource article teasers now live in lib/articles.ts (full articles,
+// rendered at /resources/[slug]) — Resources.tsx reads from there directly.
 
 export const finalCta = {
   title: "Your IELTS goal is part of",
