@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { compassDirections } from "@/lib/content";
 import { Reveal } from "./Reveal";
+import { CompassFace } from "./CompassFace";
 
 type Position = "top" | "right" | "bottom" | "left";
 
@@ -87,24 +88,9 @@ export function MentorCompass() {
               );
             })}
 
-            {/* Center identity mark — rotates gently to "orient" toward the active direction */}
+            {/* Compass face — an engraved brass instrument, needle orienting to the active direction */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <motion.div
-                animate={{ rotate: angleFor[activePosition] }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-compass-gold/50 bg-clarity-teal shadow-md"
-              >
-                <span
-                  className="font-display text-lg italic text-paper"
-                  style={{ transform: `rotate(${-angleFor[activePosition]}deg)` }}
-                >
-                  You
-                </span>
-                <span
-                  aria-hidden
-                  className="absolute left-1/2 top-0 h-2 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-compass-gold"
-                />
-              </motion.div>
+              <CompassFace size={200} angle={angleFor[activePosition]} />
             </div>
 
             {/* Direction nodes */}
@@ -168,22 +154,7 @@ export function MentorCompass() {
         {/* Mobile: a compact rotating mark + a 2x2 direction selector, one insight panel */}
         <div className="mt-10 sm:hidden">
           <div className="flex justify-center">
-            <motion.div
-              animate={{ rotate: angleFor[activePosition] }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative flex h-16 w-16 items-center justify-center rounded-full border border-compass-gold/50 bg-clarity-teal shadow-md"
-            >
-              <span
-                className="font-display text-sm italic text-paper"
-                style={{ transform: `rotate(${-angleFor[activePosition]}deg)` }}
-              >
-                You
-              </span>
-              <span
-                aria-hidden
-                className="absolute left-1/2 top-0 h-1.5 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-compass-gold"
-              />
-            </motion.div>
+            <CompassFace size={140} angle={angleFor[activePosition]} detailed={false} />
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-2">
