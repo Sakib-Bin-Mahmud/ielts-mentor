@@ -10,7 +10,7 @@ import { WhoIHelp } from "@/components/WhoIHelp";
 import { Services } from "@/components/Services";
 // import { StudentStories } from "@/components/StudentStories";
 // import { Testimonials } from "@/components/Testimonials";
-import { Achievements } from "@/components/Achievements";
+// import { Achievements } from "@/components/Achievements";
 import { Resources } from "@/components/Resources";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -46,11 +46,15 @@ export default function Home() {
       <StudentStories />
       <SectionDivider index="10" from="paper-dim" to="paper" />
       <Testimonials /> */}
-      <SectionDivider index="09" label="By the Numbers" from="paper" to="navy" />
-      <Achievements />
-      <SectionDivider index="10" label="Resources" from="navy" to="paper-dim" />
+      {/* Achievements ("By the Numbers") — commented out for now, all the
+          stats are still unfilled placeholders. Re-enable once real numbers
+          are ready, and restore the "09" chapter index below (bumping the
+          ones after back up by one). */}
+      {/* <SectionDivider index="09" label="By the Numbers" from="paper" to="navy" />
+      <Achievements /> */}
+      <SectionDivider index="09" label="Resources" from="paper" to="paper-dim" />
       <Resources />
-      <SectionDivider index="11" label="Your Next Step" from="paper-dim" to="navy" />
+      <SectionDivider index="10" label="Your Next Step" from="paper-dim" to="navy" />
       <FinalCTA />
       <Footer />
       <MentorPassport />
