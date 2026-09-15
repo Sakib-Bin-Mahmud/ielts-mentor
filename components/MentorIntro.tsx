@@ -58,6 +58,21 @@ export function MentorIntro() {
               </p>
             </Reveal>
 
+            <Reveal delay={0.25} className="mt-8 flex gap-8 border-t border-ink/10 pt-6">
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                  Role
+                </p>
+                <p className="mt-1 text-sm text-ink">{mentor.role}</p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft/50">
+                  Based In
+                </p>
+                <p className="mt-1 text-sm text-ink">{mentor.location}</p>
+              </div>
+            </Reveal>
+
             <Reveal delay={0.3} className="mt-8">
               <a
                 href="#story"
