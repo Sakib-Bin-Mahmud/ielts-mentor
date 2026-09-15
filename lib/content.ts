@@ -22,7 +22,7 @@ export const mentor = {
 };
 
 export const nav = [
-  { label: "About / My Story", href: "#story" },
+  { label: "About", href: "#story" },
   { label: "My Beliefs", href: "#philosophy" },
   { label: "My Approach", href: "#method" },
   // Success Stories section is commented out for now — see app/page.tsx.
