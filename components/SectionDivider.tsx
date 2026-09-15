@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { DividerPath } from "./DividerPath";
 
 type Tone = "paper" | "paper-dim" | "navy" | "accent";
 
@@ -98,7 +99,9 @@ export function SectionDivider({
     <div className="relative">
       {/* Solid "from" zone carries the chapter mark, so text always sits on a known-contrast background */}
       <div className={`relative overflow-hidden ${bgClass[from]}`}>
-        <div className={`pointer-events-none absolute inset-0 ${grainClass[from]} opacity-[0.4]`} />
+        {grainClass[from] && (
+          <div className={`pointer-events-none absolute inset-0 ${grainClass[from]} opacity-[0.4]`} />
+        )}
         {label && (
           <Reveal className="relative mx-auto max-w-content px-5 py-10 text-center sm:px-8 sm:py-14">
             <p
@@ -111,12 +114,12 @@ export function SectionDivider({
         <div className={`mx-auto h-8 w-px ${lineClass[from]}`} aria-hidden />
       </div>
 
-      {/* Short gradient bridge — the literal "navy -> paper" color transition */}
+      {/* Short gradient bridge — the literal "navy -> paper" color transition,
+          with the connected-path thread from the Journey Map crossing it */}
       <div
-        aria-hidden
         className={`relative h-14 w-full sm:h-20 ${gradientClass[`${from}->${to}`] ?? bgClass[to]}`}
       >
-        <div className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-compass-gold" />
+        <DividerPath />
       </div>
     </div>
   );
