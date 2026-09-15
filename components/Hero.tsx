@@ -15,8 +15,6 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden bg-paper pb-14 pt-24 sm:pb-14 sm:pt-32 lg:flex lg:min-h-[85vh] lg:items-center lg:pb-12 lg:pt-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.35]" />
-
       <div className="relative mx-auto grid w-full max-w-content items-center gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         {/* LEFT — statement */}
         <div className="order-2 lg:order-none">

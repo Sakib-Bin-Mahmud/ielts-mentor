@@ -31,8 +31,8 @@ const lineClass: Record<Tone, string> = {
 };
 
 const grainClass: Record<Tone, string> = {
-  paper: "bg-noise",
-  "paper-dim": "bg-noise",
+  paper: "",
+  "paper-dim": "",
   navy: "bg-noise-dark",
   accent: "bg-noise-dark",
 };

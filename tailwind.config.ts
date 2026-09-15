@@ -22,8 +22,8 @@ const config: Config = {
           soft: "#4B5563",
         },
         paper: {
-          DEFAULT: "#F7F5F0",
-          dim: "#EFEAE0",
+          DEFAULT: "#FFFFFF",
+          dim: "#F1F3F6",
         },
         compass: {
           gold: "#F2C94C",
