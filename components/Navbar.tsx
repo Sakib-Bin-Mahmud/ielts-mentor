@@ -40,7 +40,7 @@ export function Navbar() {
         >
           <a
             href="#top"
-            className={`font-display font-semibold tracking-tight text-ink transition-all duration-300 ${
+            className={`font-display font-bold tracking-tight text-ink transition-all duration-300 ${
               scrolled ? "text-base" : "text-lg"
             }`}
           >
@@ -53,7 +53,7 @@ export function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="group relative inline-block py-1 text-sm font-medium text-ink-soft/80 transition-colors hover:text-ink"
+                  className="group relative inline-block py-1 text-sm font-bold text-ink-soft/80 transition-colors hover:text-ink"
                 >
                   {item.label}
                   <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-clarity-teal transition-all duration-300 ease-out group-hover:w-full" />
@@ -129,7 +129,7 @@ export function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block py-4 text-base font-medium text-ink transition-colors hover:text-clarity-teal"
+                      className="block py-4 text-base font-bold text-ink transition-colors hover:text-clarity-teal"
                     >
                       {item.label}
                     </a>
