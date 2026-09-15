@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 
 const MAJOR_DEGREES = [0, 90, 180, 270];
 const TICK_COUNT = 24;
+// A quiet extra marking between two ticks — invisible at a glance, a little
+// clearer on hover. For anyone who's ever looked for a hidden platform.
+const HIDDEN_DEGREE = 45;
 
 /**
  * The compass's own instrument face — engraved rings, degree ticks, and a
@@ -69,6 +72,18 @@ export function CompassFace({
             {String(deg).padStart(3, "0")}&deg;
           </span>
         ))}
+
+      {detailed && (
+        <span
+          aria-hidden
+          className="absolute left-1/2 top-1/2 font-mono text-[7px] tracking-widest text-compass-gold/15 transition-colors duration-500 group-hover:text-compass-gold/60"
+          style={{
+            transform: `rotate(${HIDDEN_DEGREE}deg) translateY(-${labelRadius}px) rotate(${-HIDDEN_DEGREE}deg) translate(-50%, -50%)`,
+          }}
+        >
+          9&frac34;&deg;
+        </span>
+      )}
 
       {/* Brass needle — positioning (centering) and rotation are kept on
           separate elements: Framer's `animate` writes its own inline
