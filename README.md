@@ -80,7 +80,7 @@ lib/
   separate near-black ink (#111827) for all text so type never doubles as a
   tinted surface, muted teal (#1F7A8C) as the accent for every interactive/
   selection state (buttons, active tabs, eyebrows) with a lighter teal
-  (#6FB8C4) as its lighter highlight, and warm gold (#F2C94C) reserved for
+  (#6FB8C4) as its lighter highlight, and terracotta (#C1622D) reserved for
   achievement/milestone moments (band scores, unlocked badges, stats). Defined in
   `tailwind.config.ts` as the `navy`, `ink`, `paper`, `clarity`, and
   `compass` color tokens.

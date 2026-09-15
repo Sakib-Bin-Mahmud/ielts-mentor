@@ -26,8 +26,8 @@ const config: Config = {
           dim: "#F1F3F6",
         },
         compass: {
-          gold: "#F2C94C",
-          light: "#F6DA82",
+          gold: "#C1622D",
+          light: "#D99566",
         },
         clarity: {
           teal: "#1F7A8C",
