@@ -26,7 +26,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-clarity-teal"
           >
-            {hero.eyebrow}
+            {mentor.shortName} · {hero.eyebrow}
           </motion.p>
 
           <motion.h1

@@ -363,15 +363,6 @@ export const resources = [
   },
 ];
 
-export const askMentor = {
-  title: "Got an IELTS question?",
-  lines: [
-    "Maybe you've been stuck at the same score.",
-    "Maybe you're unsure where to start.",
-    "Maybe you simply need a second opinion.",
-  ],
-  cta: "Ask Me",
-};
 
 export const finalCta = {
   title: "Your IELTS goal is part of",
