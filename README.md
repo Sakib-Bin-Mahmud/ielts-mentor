@@ -75,13 +75,13 @@ lib/
 
 ## Design notes
 
-- **Palette**: "Midnight Mentor" — warm paper (#F7F5F0) background, midnight
+- **Palette**: "Midnight Mentor" — glossy white (#FFFFFF) background, midnight
   navy (#0B132B) for full-bleed dark sections and dark surfaces/badges, a
   separate near-black ink (#111827) for all text so type never doubles as a
-  tinted surface, cobalt blue (#2563EB) as the accent for every interactive/
-  selection state (buttons, active tabs, eyebrows) with sky blue (#7CC7FF) as
-  its lighter highlight, and warm gold (#F2C94C) reserved for achievement/
-  milestone moments (band scores, unlocked badges, stats). Defined in
+  tinted surface, muted teal (#1F7A8C) as the accent for every interactive/
+  selection state (buttons, active tabs, eyebrows) with a lighter teal
+  (#6FB8C4) as its lighter highlight, and warm gold (#F2C94C) reserved for
+  achievement/milestone moments (band scores, unlocked badges, stats). Defined in
   `tailwind.config.ts` as the `navy`, `ink`, `paper`, `clarity`, and
   `compass` color tokens.
 - **Fonts**: Playfair Display (hero headlines, section headings, editorial

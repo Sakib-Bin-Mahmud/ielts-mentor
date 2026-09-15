@@ -30,8 +30,8 @@ const config: Config = {
           light: "#F6DA82",
         },
         clarity: {
-          teal: "#2563EB",
-          light: "#7CC7FF",
+          teal: "#1F7A8C",
+          light: "#6FB8C4",
         },
       },
       fontFamily: {
