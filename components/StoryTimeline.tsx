@@ -1,7 +1,6 @@
 import { storyTimeline } from "@/lib/content";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
-import { Placeholder } from "./Placeholder";
 
 export function StoryTimeline() {
   return (
@@ -12,25 +11,8 @@ export function StoryTimeline() {
           title="Not a résumé. A path."
           subtitle="Every mentor's method is shaped by how they got here. This is that path, one chapter at a time."
         />
-      </div>
 
-      {/* Personal / journey photo — the site's one full-bleed editorial break */}
-      <Reveal delay={0.1} className="my-12 sm:my-16">
-        <div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[3/1]">
-          <Placeholder
-            className="absolute inset-0 flex items-center justify-center border-y border-ink/10 bg-paper-dim text-center"
-            label="Add a candid, personal photo"
-          >
-            <span className="text-sm text-ink-soft/60">
-              [ Personal / journey photo ]
-            </span>
-          </Placeholder>
-          <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.25]" />
-        </div>
-      </Reveal>
-
-      <div className="mx-auto max-w-content px-5 sm:px-8">
-        <div className="relative">
+        <div className="relative mt-14">
           <div className="absolute left-[4px] top-1 h-full w-px bg-ink/10 sm:left-[7px]" />
           <ol className="space-y-9 sm:space-y-14">
             {storyTimeline.map((chapter, i) => (

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { hero, scoreScale, mentor } from "@/lib/content";
-import { Placeholder } from "./Placeholder";
 
 export function Hero() {
   const [value, setValue] = useState(7.0);
@@ -136,14 +136,14 @@ export function Hero() {
 
             {/* Photo frame */}
             <div className="absolute inset-0 overflow-hidden rounded-xl border border-ink/10 bg-paper-dim">
-              <Placeholder
-                className="absolute inset-4 bottom-20 flex items-center justify-center rounded-lg border-2 border-dashed border-ink/15 bg-white/40 text-center sm:bottom-24"
-                label="Add mentor's portrait photo"
-              >
-                <span className="px-6 text-sm text-ink-soft/60">
-                  [ Editorial portrait ]
-                </span>
-              </Placeholder>
+              <Image
+                src="/images/mentor-portrait.png"
+                alt={`${mentor.name}, ${mentor.role}`}
+                fill
+                priority
+                sizes="(min-width: 1024px) 45vw, (min-width: 640px) 384px, 100vw"
+                className="object-cover"
+              />
 
               {/* Passport-style identity plate */}
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-navy px-5 py-4">

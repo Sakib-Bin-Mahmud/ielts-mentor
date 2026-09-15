@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { mentorIntro, mentor } from "@/lib/content";
 import { Reveal } from "./Reveal";
-import { Placeholder } from "./Placeholder";
 
 export function MentorIntro() {
   return (
@@ -9,14 +9,14 @@ export function MentorIntro() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal>
             <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-ink/10 bg-ink/5 md:max-w-none">
-              <Placeholder
-                className="absolute inset-4 flex items-center justify-center rounded-lg border-2 border-dashed border-ink/15 bg-white/40 text-center"
-                label="Add a natural teaching/speaking photo"
-              >
-                <span className="px-6 text-sm text-ink-soft/60">
-                  [ Mentor / speaking photo ]
-                </span>
-              </Placeholder>
+              <Image
+                src="/images/mentor-speaking.png"
+                alt={`${mentor.name} speaking during a teaching session`}
+                fill
+                sizes="(min-width: 768px) 40vw, 384px"
+                className="object-cover"
+                style={{ objectPosition: "38% 30%" }}
+              />
               {/* Subtle film-grain texture, matches the hero portrait's treatment */}
               <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.15]" />
             </div>
