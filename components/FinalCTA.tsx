@@ -1,7 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import { finalCta, bandLanguage } from "@/lib/content";
 import { Reveal } from "./Reveal";
+import { ContactModal } from "./ContactModal";
 
 export function FinalCTA() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section
       id="final-cta"
@@ -25,18 +31,18 @@ export function FinalCTA() {
 
         <Reveal delay={0.3}>
           <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
-            <a
-              href="#final-cta"
+            <button
+              onClick={() => setContactOpen(true)}
               className="w-full max-w-xs rounded-full bg-compass-gold px-8 py-3.5 text-center text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md sm:w-auto sm:max-w-none"
             >
               {finalCta.primary}
-            </a>
-            <a
-              href="#final-cta"
+            </button>
+            <button
+              onClick={() => setContactOpen(true)}
               className="w-full max-w-xs rounded-full border border-paper/30 px-8 py-3.5 text-center text-sm font-semibold text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-paper hover:text-ink sm:w-auto sm:max-w-none"
             >
               {finalCta.secondary}
-            </a>
+            </button>
           </div>
 
           {/* Band-score marker — an illustrative range, not a promised outcome */}
@@ -51,6 +57,8 @@ export function FinalCTA() {
           </div>
         </Reveal>
       </div>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   );
 }
